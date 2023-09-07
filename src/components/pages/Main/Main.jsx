@@ -2,12 +2,14 @@
 
 import Header from '../../Header/Header'
 import ProductList from '../../ProductList/ProductList'
-
+import { Container } from 'react-bootstrap'
 function Main() {
   return (
     <>
-      <Header />
-      <ProductList />
+      <Container>
+        <Header />
+        <ProductList />
+      </Container>
     </>
   )
 }

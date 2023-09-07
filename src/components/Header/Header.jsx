@@ -4,14 +4,23 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Form from 'react-bootstrap/Form'
+// import styled from 'styled-components'
 
 function Header() {
   return (
-    <Navbar bg='light' expand='lg'>
-      <Navbar.Brand href='#'>Shop</Navbar.Brand>
+    <Navbar
+      sticky='top'
+      bg='primary'
+      expand='lg'
+      className='justify-content-between my-2 rounded'>
+      <Navbar.Brand href='#' className='navbar-shop mx-4'>
+        Shop
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
-      <Navbar.Collapse id='basic-navbar-nav'>
-        <Nav className='ml-auto'>
+      <Navbar.Collapse
+        id='basic-navbar-nav'
+        className='justify-content-end mx-2'>
+        <Nav className='ml-auto mx-2'>
           <Nav.Link href='#'>About</Nav.Link>
           <Nav.Link href='#'>Contacts</Nav.Link>
         </Nav>
