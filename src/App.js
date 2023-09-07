@@ -38,15 +38,14 @@ function App() {
         return response.text();
       })
       .then((data) => {
-
         const jsonData = JSON.parse(data);
         setcommentData(jsonData.comments);
+        console.log(jsonData)
       })
       .catch((error) => {
         console.error('Error in response:', error);
       });
   };
-
 
   return (
     <BrowserRouter>
