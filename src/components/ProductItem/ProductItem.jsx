@@ -8,10 +8,11 @@ import styled from 'styled-components'
 function ProductItem({ product }) {
   const CardBox = styled.div`
     margin: 0.3rem;
+    height: 53rem;
   `
   return (
     <CardBox className='product-item'>
-      <Card style={{ width: '15rem' }} className='h-100'>
+      <Card style={{ width: '100%' }} className='h-100 p-1'>
         <Card.Img
           variant='top'
           src={product.image}
