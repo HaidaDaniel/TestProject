@@ -3,13 +3,13 @@
 import { Form, Button } from 'react-bootstrap'
 import styled from 'styled-components'
 
-function LoginBody() {
-  const LoginBox = styled.div`
+function RegistrationBody() {
+  const RegistrationBox = styled.div`
     display: flex;
     justify-content: center;
   `
   return (
-    <LoginBox>
+    <RegistrationBox>
       <Form className='w-50 '>
         <Form.Group className='mb-3' controlId='formGroupEmail'>
           <Form.Label>Email address or nickname</Form.Label>
@@ -23,7 +23,7 @@ function LoginBody() {
           Login
         </Button>
       </Form>
-    </LoginBox>
+    </RegistrationBox>
   )
 }
-export default LoginBody
+export default RegistrationBody

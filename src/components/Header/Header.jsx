@@ -24,7 +24,9 @@ function Header({ setActiveComponent }) {
         id='basic-navbar-nav'
         className='justify-content-end mx-2'>
         <Nav className='ml-auto mx-2'>
-          <Nav.Link href='#'>Registration</Nav.Link>
+          <Nav.Link onClick={() => setActiveComponent('registration')} href='#'>
+            Registration
+          </Nav.Link>
           <Nav.Link onClick={() => setActiveComponent('login')} href='#'>
             Login
           </Nav.Link>
