@@ -6,14 +6,17 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import Form from 'react-bootstrap/Form'
 // import styled from 'styled-components'
 
-function Header() {
+function Header({ setActiveComponent }) {
   return (
     <Navbar
       sticky='top'
       bg='primary'
       expand='lg'
       className='justify-content-between my-2 rounded'>
-      <Navbar.Brand href='#' className='navbar-shop mx-4'>
+      <Navbar.Brand
+        onClick={() => setActiveComponent('main')}
+        href='#'
+        className='navbar-shop mx-4'>
         Shop
       </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -22,7 +25,9 @@ function Header() {
         className='justify-content-end mx-2'>
         <Nav className='ml-auto mx-2'>
           <Nav.Link href='#'>Registration</Nav.Link>
-          <Nav.Link href='#'>Login</Nav.Link>
+          <Nav.Link onClick={() => setActiveComponent('login')} href='#'>
+            Login
+          </Nav.Link>
         </Nav>
         <Form inline>
           <InputGroup>
