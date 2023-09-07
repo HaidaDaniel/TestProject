@@ -1,19 +1,27 @@
 /** @format */
 
 import React from 'react'
-import styled from 'styled-components'
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 
 function ProductItem({ product }) {
-  const Image = styled.img`
-    max-width: 300px;
-    max-height: 300px;
-  `
   return (
     <div className='product-item'>
-      <Image src={product.image} alt={product.title} />
-      <h2>{product.title}</h2>
-      <h3>Price: {product.price}</h3>
-      <h4>Stars: {product['rating'].rate}</h4>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant='top' src={product.image} alt={product.title} />
+        <Card.Body>
+          <Card.Title>
+            {product.title} {product['rating'].rate} stars
+          </Card.Title>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+          <Button variant='primary'>Go somewhere</Button>
+
+          <h3>Price: {product.price}usd</h3>
+        </Card.Body>
+      </Card>
     </div>
   )
 }
