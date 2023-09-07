@@ -6,7 +6,7 @@ import styled from 'styled-components'
 function RegistrationBody() {
   const RegistrationBox = styled.div`
     display: flex;
-    align-self: center;
+    margin: 0 auto;
     justify-content: center;
     width: 50%;
     border: 1px solid grey;
@@ -30,8 +30,8 @@ function RegistrationBody() {
           <Form.Label>Password</Form.Label>
           <Form.Control type='password' placeholder='Password' />
         </Form.Group>
-        <Button variant='primary' type='submit'>
-          Login
+        <Button variant='primary' type='submit' className='mb-3'>
+          Registration
         </Button>
       </Form>
     </RegistrationBox>

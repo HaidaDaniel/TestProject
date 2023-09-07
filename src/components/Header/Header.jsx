@@ -1,6 +1,7 @@
 /** @format */
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Form from 'react-bootstrap/Form'
@@ -13,10 +14,7 @@ function Header({ setActiveComponent }) {
       bg='primary'
       expand='lg'
       className='justify-content-between my-2 rounded'>
-      <Navbar.Brand
-        onClick={() => setActiveComponent('main')}
-        href='#'
-        className='navbar-shop mx-4'>
+      <Navbar.Brand as={Link} to='/' href='#' className='navbar-shop mx-4'>
         Shop
       </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -24,10 +22,10 @@ function Header({ setActiveComponent }) {
         id='basic-navbar-nav'
         className='justify-content-end mx-2'>
         <Nav className='ml-auto mx-2'>
-          <Nav.Link onClick={() => setActiveComponent('registration')} href='#'>
+          <Nav.Link as={Link} to='/registration'>
             Registration
           </Nav.Link>
-          <Nav.Link onClick={() => setActiveComponent('login')} href='#'>
+          <Nav.Link as={Link} to='/login'>
             Login
           </Nav.Link>
         </Nav>
