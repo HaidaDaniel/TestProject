@@ -21,8 +21,8 @@ function Header() {
         id='basic-navbar-nav'
         className='justify-content-end mx-2'>
         <Nav className='ml-auto mx-2'>
-          <Nav.Link href='#'>About</Nav.Link>
-          <Nav.Link href='#'>Contacts</Nav.Link>
+          <Nav.Link href='#'>Registration</Nav.Link>
+          <Nav.Link href='#'>Login</Nav.Link>
         </Nav>
         <Form inline>
           <InputGroup>
