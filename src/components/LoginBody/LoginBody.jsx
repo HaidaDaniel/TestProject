@@ -1,11 +1,10 @@
 /** @format */
 
-import { Form, Button, Col } from 'react-bootstrap'
-import styled from 'styled-components'
+import { Form, Button, Col, Row } from 'react-bootstrap'
 
 function LoginBody() {
   return (
-    <>
+    <Row>
       <Form className='pt-3'>
         <Col xs={12} md={6} className='mx-auto border rounded pt-1'>
           <h3>Login</h3>
@@ -25,7 +24,7 @@ function LoginBody() {
           </Button>
         </Col>
       </Form>
-    </>
+    </Row>
   )
 }
 export default LoginBody

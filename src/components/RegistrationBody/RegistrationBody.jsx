@@ -1,10 +1,10 @@
 /** @format */
 
-import { Form, Button, Col } from 'react-bootstrap'
+import { Form, Button, Col, Row } from 'react-bootstrap'
 
 function RegistrationBody() {
   return (
-    <div>
+    <Row>
       <Form className=' pt-3'>
         <Col xs={12} md={6} className='mx-auto border rounded'>
           <h3>Registration Form</h3>
@@ -29,7 +29,7 @@ function RegistrationBody() {
           </Button>
         </Col>
       </Form>
-    </div>
+    </Row>
   )
 }
 export default RegistrationBody

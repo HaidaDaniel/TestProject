@@ -1,6 +1,7 @@
 /** @format */
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import styled from 'styled-components'
@@ -28,7 +29,9 @@ function ProductItem({ product }) {
         </Card.Body>
         <Card.Footer className='mt-auto'>
           <h3>Price: {product.price}usd</h3>
-          <Button variant='primary'>Get details</Button>
+          <Link to={`/products/${product.id}`}>
+            <Button variant='primary'>Get details</Button>
+          </Link>
         </Card.Footer>
       </Card>
     </CardBox>

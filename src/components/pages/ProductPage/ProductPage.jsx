@@ -3,11 +3,11 @@ import Header from '../../Header/Header'
 import ProductPageBody from '../../ProductPageBody/ProductPageBody'
 import { Container } from 'react-bootstrap'
 
-function ProductPage() {
+function ProductPage(props) {
   return (
     <Container>
       <Header></Header>
-      <ProductPageBody></ProductPageBody>
+      <ProductPageBody props={props}></ProductPageBody>
     </Container>
   )
 }
