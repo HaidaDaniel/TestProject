@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState, useEffect } from 'react'
-import ProductItem from '../ProductItem/ProductItem'
+import ProductsGrid from '../ProductGrid/ProductGrid'
 import styled from 'styled-components'
 
 function ProductList() {
@@ -30,13 +30,7 @@ function ProductList() {
       })
   }, [])
 
-  return (
-    <ProductListGrid>
-      {products.map((product) => (
-        <ProductItem key={product.id} product={product} />
-      ))}
-    </ProductListGrid>
-  )
+  return <ProductsGrid products={products} />
 }
 
 export default ProductList
