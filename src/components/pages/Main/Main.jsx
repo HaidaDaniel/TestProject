@@ -1,13 +1,16 @@
 /** @format */
 import Header from '../../Header/Header'
 import { Container } from 'react-bootstrap'
-import ProductList from '../../ProductList/ProductList'
+import ProductsGrid from '../../ProductsGrid/ProductsGrid'
 
-function Main({ productsData }) {
+function Main({ productsData, onShowDetailClick }) {
   return (
     <Container>
       <Header></Header>
-      <ProductList productsData={productsData} />
+      <ProductsGrid
+        productsData={productsData}
+        onShowDetailClick={onShowDetailClick}
+      />
     </Container>
   )
 }

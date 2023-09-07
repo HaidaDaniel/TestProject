@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import styled from 'styled-components'
 
-function ProductItem({ product }) {
+function ProductItem({ product, onShowDetailClick }) {
   const CardBox = styled.div`
     margin: 0.3rem;
     height: 53rem;
@@ -30,7 +30,11 @@ function ProductItem({ product }) {
         <Card.Footer className='mt-auto'>
           <h3>Price: {product.price}usd</h3>
           <Link to={`/products/${product.id}`}>
-            <Button variant='primary'>Get details</Button>
+            <Button
+              onClick={() => onShowDetailClick(product.id)}
+              variant='primary'>
+              Get details
+            </Button>
           </Link>
         </Card.Footer>
       </Card>

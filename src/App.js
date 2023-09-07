@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   const [logged, setlogged] = useState(false)
   const [productsData, setproductsData] = useState('')
+  const [commentData, setcommentData] = useState('')
   useEffect(() => {
     fetch('http://demo5127360.mockable.io/products')
       .then((response) => {
@@ -24,15 +25,31 @@ function App() {
         setproductsData(data)
       })
       .catch((error) => {
-        console.error('Error in response', error)
+        console.error('Error is in response', error)
       })
   }, [])
+  const onShowDetailClick = (id) => {
+    fetch('http://demo5127360.mockable.io/product/' + id)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('No response is not OK')
+        }
+        return response.json()
+      })
+      .then((data) => {
+        setcommentData(data.comments)
+      })
+      .catch((error) => {
+        console.error('Error is in response', error)
+      })
+
+  }
 
   return (
     <BrowserRouter>
       <div className='App'>
         <Routes>
-          <Route exact path='/' element={<Main productsData={productsData} />} />
+          <Route exact path='/' element={<Main productsData={productsData} onShowDetailClick={onShowDetailClick} />} />
           <Route path='/login' element={<Login />} />
           <Route path='/registration' element={<Registration />} />
           <Route path="/products/:id" component={<ProductPage />} />
