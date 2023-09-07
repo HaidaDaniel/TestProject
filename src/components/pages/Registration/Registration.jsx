@@ -1,13 +1,21 @@
 /** @format */
 import Header from '../../Header/Header'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import RegistrationBody from '../../RegistrationBody/RegistrationBody'
 
 function Registration() {
   return (
     <Container>
-      <Header></Header>
-      <RegistrationBody></RegistrationBody>
+      <Row>
+        <Col>
+          <Header></Header>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <RegistrationBody></RegistrationBody>
+        </Col>
+      </Row>
     </Container>
   )
 }
