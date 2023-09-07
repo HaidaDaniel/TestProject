@@ -28,22 +28,25 @@ function App() {
         console.error('Error is in response', error)
       })
   }, [])
+
   const onShowDetailClick = (id) => {
     fetch('http://demo5127360.mockable.io/product/' + id)
       .then((response) => {
         if (!response.ok) {
-          throw new Error('No response is not OK')
+          throw new Error('Response is not OK');
         }
-        return response.json()
+        return response.text();
       })
       .then((data) => {
-        setcommentData(data.comments)
+
+        const jsonData = JSON.parse(data);
+        setcommentData(jsonData.comments);
       })
       .catch((error) => {
-        console.error('Error is in response', error)
-      })
+        console.error('Error in response:', error);
+      });
+  };
 
-  }
 
   return (
     <BrowserRouter>
@@ -52,7 +55,7 @@ function App() {
           <Route exact path='/' element={<Main productsData={productsData} onShowDetailClick={onShowDetailClick} />} />
           <Route path='/login' element={<Login />} />
           <Route path='/registration' element={<Registration />} />
-          <Route path="/products/:id" component={<ProductPage />} />
+          <Route path="/products/:id" element={<ProductPage data={productsData['0']} comments={commentData} />} />
         </Routes>
       </div>
     </BrowserRouter>

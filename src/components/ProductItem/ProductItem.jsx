@@ -1,18 +1,12 @@
 /** @format */
-
-import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import styled from 'styled-components'
+import './index.css'
 
 function ProductItem({ product, onShowDetailClick }) {
-  const CardBox = styled.div`
-    margin: 0.3rem;
-    height: 53rem;
-  `
   return (
-    <CardBox className='product-item'>
+    <div className='product-item'>
       <Card style={{ width: '100%' }} className='h-100 p-1'>
         <Card.Img
           variant='top'
@@ -38,7 +32,7 @@ function ProductItem({ product, onShowDetailClick }) {
           </Link>
         </Card.Footer>
       </Card>
-    </CardBox>
+    </div>
   )
 }
 

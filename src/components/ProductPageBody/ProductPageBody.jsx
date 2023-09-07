@@ -1,11 +1,20 @@
 /** @format */
 import { Row, Col } from 'react-bootstrap'
 
-function ProductPageBody(props) {
+function ProductPageBody({ data }) {
   return (
     <>
       <Row>
-        <Col></Col>
+        <Col>
+          {data && (
+            <img
+              variant='top'
+              src={data.image}
+              alt={data.title}
+              className='p-2'
+            />
+          )}
+        </Col>
         <Col></Col>
       </Row>
       <Row>
