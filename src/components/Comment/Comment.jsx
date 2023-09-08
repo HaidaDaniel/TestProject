@@ -1,5 +1,5 @@
 /** @format */
-import { Card, Row, Col } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import RatingStars from '../RatingStars/RatingStars'
 import './index.css'
 
@@ -10,9 +10,14 @@ function Comment({ author, text, rating }) {
         <Card.Header className='d-flex'>
           <RatingStars rating={rating} />
         </Card.Header>
-        <Card.Subtitle className='mb-2 text-muted'></Card.Subtitle>Name:{' '}
-        {author}
-        <Card.Text className='d-flex '>{text}</Card.Text>
+        <Card.Subtitle className='mb-2 text-muted'></Card.Subtitle>
+
+        <Card.Text className='' style={{ textAlign: 'left' }}>
+          {text}
+        </Card.Text>
+        <Card.Text className='d-flex justify-content: flex-end'>
+          {author}
+        </Card.Text>
       </Card.Body>
     </Card>
   )

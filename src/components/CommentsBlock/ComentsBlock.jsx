@@ -1,11 +1,12 @@
 /** @format */
 import Comment from '../Comment/Comment'
 import { Stack } from 'react-bootstrap'
+import './index.css'
 
 function CommentsBlock({ comments }) {
   return (
     <div className='comment-block'>
-      <h4>Customer Reviews :</h4>
+      <h5>Customer Reviews :</h5>
       <Stack gap={3}>
         {comments &&
           comments.map((comment) => (
