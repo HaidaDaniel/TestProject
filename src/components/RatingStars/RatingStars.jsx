@@ -19,10 +19,13 @@ function RatingStars({ rating }) {
           starClass += ' half-filled'
         }
 
-        return <span key={index} className={starClass}></span>
+        return (
+          <span key={index} className={starClass}>
+            &#9733; {/* Символ Unicode для звезды */}
+          </span>
+        )
       })}
     </div>
   )
 }
-
 export default RatingStars

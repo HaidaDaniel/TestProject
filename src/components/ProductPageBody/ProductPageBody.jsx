@@ -22,14 +22,22 @@ function ProductPageBody({ data, comments }) {
         <Col md='6' xs='12' className='mt-3'>
           <Row>
             <h3>{data.title}</h3>
-            <RatingStars rating={data.rating.rate} />
-
+          </Row>
+          <Row>
+            <p>Rating:</p>
+            <RatingStars rating={data.rating.rate} />{' '}
+            <p>{data.rating.rate}/5</p>
+          </Row>
+          <Row>
             <h4>Price:{' ' + data.price + ' '}usd</h4>
+          </Row>
+          <Row>
             <h5>
               Description: <br />
               {data.description}
             </h5>
           </Row>
+
           <Row>{comments && <CommentsBlock comments={comments} />}</Row>
         </Col>
       </Row>
