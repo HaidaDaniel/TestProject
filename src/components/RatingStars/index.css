@@ -1,5 +1,6 @@
 .rating-stars {
     display: inline-block;
+    margin-left: 0;
 }
 
 .star {

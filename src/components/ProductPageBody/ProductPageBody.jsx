@@ -20,25 +20,24 @@ function ProductPageBody({ data, comments }) {
           )}
         </Col>
         <Col md='6' xs='12' className='mt-3'>
-          <Row>
+          <Row className='mb-3'>
             <h3>{data.title}</h3>
           </Row>
-          <Row>
-            <p>Rating:</p>
-            <RatingStars rating={data.rating.rate} />{' '}
-            <p>{data.rating.rate}/5</p>
+          <Row className='align-items-center mb-3'>
+            <Col xs='auto'>
+              <RatingStars rating={data.rating.rate} />
+            </Col>
+            <Col xs='auto' className='ml-auto my-auto'>
+              <p>Price:{' ' + data.price + ' '}usd</p>
+            </Col>
           </Row>
           <Row>
-            <h4>Price:{' ' + data.price + ' '}usd</h4>
+            <h5>Description:</h5>
           </Row>
-          <Row>
-            <h5>
-              Description: <br />
-              {data.description}
-            </h5>
+          <Row className='mb-3'>{data.description}</Row>
+          <Row className='mb-3 border rounded'>
+            {comments && <CommentsBlock comments={comments} />}
           </Row>
-
-          <Row>{comments && <CommentsBlock comments={comments} />}</Row>
         </Col>
       </Row>
     </>

@@ -4,7 +4,6 @@ import './index.css'
 function RatingStars({ rating }) {
   const roundedRating = Math.round(rating * 2) / 2
   const totalStars = 5
-  console.log(rating)
 
   return (
     <div className='rating-stars'>
@@ -21,10 +20,11 @@ function RatingStars({ rating }) {
 
         return (
           <span key={index} className={starClass}>
-            &#9733; {/* Символ Unicode для звезды */}
+            &#9733;
           </span>
         )
       })}
+      {rating + '/' + totalStars}
     </div>
   )
 }
