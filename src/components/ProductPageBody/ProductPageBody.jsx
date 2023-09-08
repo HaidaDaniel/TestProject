@@ -1,7 +1,7 @@
 /** @format */
 import { Row, Col } from 'react-bootstrap'
-import ProgressBar from 'react-bootstrap/ProgressBar'
 import CommentsBlock from '../CommentsBlock/ComentsBlock'
+import RatingStars from '../RatingStars/RatingStars'
 
 function ProductPageBody({ data, comments }) {
   console.log(data)
@@ -22,12 +22,7 @@ function ProductPageBody({ data, comments }) {
         <Col md='6' xs='12' className='mt-3'>
           <Row>
             <h3>{data.title}</h3>
-
-            <ProgressBar
-              now={data.rating.rate * 20}
-              label={`${data.rating.rate * 20}%`}
-              className='w-30 mx-3 p-0'
-            />
+            <RatingStars rating={data.rating.rate} />
 
             <h4>Price:{' ' + data.price + ' '}usd</h4>
             <h5>

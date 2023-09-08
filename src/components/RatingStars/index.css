@@ -1,0 +1,27 @@
+.rating-stars {
+    display: inline-block;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+    margin-right: 2px;
+}
+
+.filled {
+    color: #f5a623;
+
+}
+
+.half-filled {
+    position: relative;
+}
+
+.half-filled::before {
+    content: "\2605";
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #f5a623;
+}
