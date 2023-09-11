@@ -9,11 +9,8 @@ function LoginBody() {
         <Col xs={12} md={6} className='mx-auto border rounded pt-1'>
           <h3>Login</h3>
           <Form.Group className='my-3 mx-4' controlId='formGroupEmail'>
-            <Form.Label>Email address or nickname</Form.Label>
-            <Form.Control
-              type='string'
-              placeholder='Email address or nickname'
-            />
+            <Form.Label>Email address </Form.Label>
+            <Form.Control type='email' placeholder='Email address' />
           </Form.Group>
           <Form.Group className='mb-3 mx-4' controlId='formGroupPassword'>
             <Form.Label>Password</Form.Label>

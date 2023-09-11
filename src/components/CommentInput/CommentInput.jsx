@@ -1,14 +1,7 @@
 /** @format */
-import React from 'react'
-import { useState, useEffect } from 'react'
-import {
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Textarea,
-  Button,
-} from 'react-bootstrap'
+import RatingStars from '../RatingStars/RatingStars'
+import { useState } from 'react'
+import { Form, FormGroup, Button } from 'react-bootstrap'
 
 function CommentInput({ productId }) {
   const [rating, setRating] = useState(null)
@@ -31,27 +24,15 @@ function CommentInput({ productId }) {
       body: JSON.stringify(data),
     })
 
-    // Обновляем состояние компонента
     setRating(null)
     setText('')
   }
   return (
     <Form onSubmit={handleSubmit}>
+      <RatingStars rating={rating} isInput />
       <FormGroup>
-        <Label for='rating'>Оценка</Label>
-        <Input
-          type='number'
-          id='rating'
-          min='1'
-          max='5'
-          step='1'
-          value={rating}
-          onChange={(e) => setRating(e.target.value)}
-        />
-      </FormGroup>
-      <FormGroup>
-        <Label for='text'>Текст отзыва</Label>
-        <Textarea
+        <label for='text'>Review text</label>
+        <textarea
           id='text'
           name='text'
           cols='30'
@@ -60,7 +41,7 @@ function CommentInput({ productId }) {
           onChange={(e) => setText(e.target.value)}
         />
       </FormGroup>
-      <Button type='submit'>Отправить</Button>
+      <Button type='submit'>Send</Button>
     </Form>
   )
 }

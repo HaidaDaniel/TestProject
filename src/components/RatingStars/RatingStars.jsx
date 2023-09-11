@@ -1,16 +1,33 @@
 /** @format */
+import { useState } from 'react'
 import './index.css'
 
-function RatingStars({ rating }) {
-  const roundedRating = Math.round(rating * 2) / 2
-  const totalStars = 5
+function RatingStars({ rating, isInput }) {
+  const [ratingInput, setRatingInput] = useState(0)
+
+  const roundedRating = Math.round((rating | ratingInput) * 2) / 2
+
+  //   const handleClick = (index) => {
+  //     setRoundedRating(index + 0.5)
+  //   }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    // Отправляем значение рейтинга на бэкенд
+    // ...
+  }
 
   return (
     <div className='rating-stars'>
-      {Array.from({ length: totalStars }).map((_, index) => {
+      {Array.from({ length: 5 }).map((_, index) => {
         const starValue = index + 0.5
 
         let starClass = 'star'
+
+        if (isInput) {
+          starClass += ' input'
+        }
 
         if (starValue <= roundedRating) {
           starClass += ' filled'
@@ -24,8 +41,9 @@ function RatingStars({ rating }) {
           </span>
         )
       })}
-      {rating + '/' + totalStars}
+      {(rating | ratingInput) + '/' + 5}
     </div>
   )
 }
+
 export default RatingStars

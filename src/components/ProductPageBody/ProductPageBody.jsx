@@ -6,7 +6,7 @@ import RatingStars from '../RatingStars/RatingStars'
 import './index.css'
 
 function ProductPageBody({ data, comments }) {
-  console.log(data)
+  console.log(comments)
   return (
     <>
       <Row className='mt-6'>
@@ -27,7 +27,7 @@ function ProductPageBody({ data, comments }) {
           </Row>
           <Row className='align-items-center mb-3'>
             <Col xs='auto'>
-              <RatingStars rating={data.rating.rate} />
+              <RatingStars rating={data.rating.rate} isInput={false} />
             </Col>
             <Col xs='auto' className='ml-auto my-auto'>
               <p>Price:{' ' + data.price + ' '}usd</p>

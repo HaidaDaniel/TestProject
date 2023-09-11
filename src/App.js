@@ -10,9 +10,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-  const [logged, setlogged] = useState(false)
-  const [productsData, setproductsData] = useState('')
-  const [commentData, setcommentData] = useState('')
+  // const [logged, setLogged] = useState(false)
+  const [productsData, setProductsData] = useState('')
+  const [commentData, setCommentData] = useState('')
   useEffect(() => {
     fetch('http://demo5127360.mockable.io/products')
       .then((response) => {
@@ -22,7 +22,7 @@ function App() {
         return response.json()
       })
       .then((data) => {
-        setproductsData(data)
+        setProductsData(data)
       })
       .catch((error) => {
         console.error('Error is in response', error)
@@ -39,7 +39,7 @@ function App() {
       })
       .then((data) => {
         const jsonData = JSON.parse(data);
-        setcommentData(jsonData.comments);
+        setCommentData(jsonData.comments);
         console.log(jsonData)
       })
       .catch((error) => {
