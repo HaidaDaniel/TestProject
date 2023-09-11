@@ -7,14 +7,17 @@ import './index.css'
 function ProductItem({ product, onShowDetailClick }) {
   return (
     <div className='product-item'>
-      <Card style={{ width: '100%' }} className='h-100 p-1'>
-        <Card.Img
-          variant='top'
-          src={product.image}
-          alt={product.title}
-          className='p-2'
-        />
-        <Card.Body>
+      <Card style={{ width: '100%' }} className=' h-100 p-1'>
+        <div className='d-flex flex-column h-100 justify-content-center'>
+          <Card.Img
+            variant='top'
+            src={product.image}
+            alt={product.title}
+            className=''
+          />
+        </div>
+
+        <Card.Body className='product-card'>
           <Card.Title>
             {product.title} <h3>{product['rating'].rate} stars </h3>
             <h4>{product['rating'].count} orders</h4>
