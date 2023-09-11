@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   // const [logged, setLogged] = useState(false)
-  const [productsData, setProductsData] = useState('')
+  const [productsData, setProductsData] = useState([])
   const [productData, setProductData] = useState('')
 
 
