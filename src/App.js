@@ -13,6 +13,8 @@ function App() {
   // const [logged, setLogged] = useState(false)
   const [productsData, setProductsData] = useState('')
   const [productData, setProductData] = useState('')
+
+
   useEffect(() => {
     fetch('http://demo5127360.mockable.io/products')
       .then((response) => {
@@ -40,7 +42,8 @@ function App() {
       .then((data) => {
         const jsonData = JSON.parse(data);
         setProductData(jsonData.data);
-        console.log(jsonData)
+
+
       })
       .catch((error) => {
         console.error('Error in response:', error);
