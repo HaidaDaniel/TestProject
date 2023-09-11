@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   // const [logged, setLogged] = useState(false)
   const [productsData, setProductsData] = useState('')
-  const [commentData, setCommentData] = useState('')
+  const [productData, setProductData] = useState('')
   useEffect(() => {
     fetch('http://demo5127360.mockable.io/products')
       .then((response) => {
@@ -39,7 +39,7 @@ function App() {
       })
       .then((data) => {
         const jsonData = JSON.parse(data);
-        setCommentData(jsonData.comments);
+        setProductData(jsonData.data);
         console.log(jsonData)
       })
       .catch((error) => {
@@ -54,7 +54,7 @@ function App() {
           <Route exact path='/' element={<Main productsData={productsData} onShowDetailClick={onShowDetailClick} />} />
           <Route path='/login' element={<Login />} />
           <Route path='/registration' element={<Registration />} />
-          <Route path="/products/:id" element={<ProductPage data={productsData['0']} comments={commentData} />} />
+          <Route path="/products/:id" element={<ProductPage data={productData} />} />
         </Routes>
       </div>
     </BrowserRouter>

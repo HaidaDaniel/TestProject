@@ -41,7 +41,7 @@ function RatingStars({ rating, isInput }) {
           </span>
         )
       })}
-      {(rating | ratingInput) + '/' + 5}
+      {(rating || ratingInput) + '/' + 5}
     </div>
   )
 }
