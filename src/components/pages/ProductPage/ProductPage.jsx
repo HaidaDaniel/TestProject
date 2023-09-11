@@ -1,11 +1,10 @@
 /** @format */
-
+// import { detailedProductShape } from '../../PropTypes/DetailedProductShape/DetailedProductShape'
 import Header from '../../Header/Header'
 import ProductPageBody from '../../ProductPageBody/ProductPageBody'
 import { Container } from 'react-bootstrap'
 
 function ProductPage({ data }) {
-  console.log(data)
   return (
     <Container>
       <Header></Header>
@@ -14,3 +13,7 @@ function ProductPage({ data }) {
   )
 }
 export default ProductPage
+
+// ProductPage.propTypes = {
+//   data: detailedProductShape.isRequired,
+// }

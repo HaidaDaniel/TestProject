@@ -3,11 +3,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
-import InputGroup from 'react-bootstrap/InputGroup'
-import Form from 'react-bootstrap/Form'
-// import styled from 'styled-components'
 
-function Header({ setActiveComponent }) {
+function Header() {
   return (
     <Navbar
       sticky='top'
@@ -29,20 +26,11 @@ function Header({ setActiveComponent }) {
             Login
           </Nav.Link>
         </Nav>
-        <Form inline>
-          <InputGroup>
-            <InputGroup.Text id='basic-addon1'>login</InputGroup.Text>
-            <Form.Control
-              placeholder='Username'
-              aria-label='Username'
-              aria-describedby='basic-addon1'
-            />
-          </InputGroup>
-        </Form>
-        <Form inline></Form>
       </Navbar.Collapse>
     </Navbar>
   )
 }
 
 export default Header
+
+Header.propTypes = {}

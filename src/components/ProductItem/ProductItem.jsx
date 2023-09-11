@@ -1,10 +1,12 @@
 /** @format */
+import PropTypes from 'prop-types'
+import { productShape } from '../PropTypes/ProductShape/ProductShape'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import './index.css'
 
-function ProductItem({ product, onShowDetailClick }) {
+function ProductItem({ product, onProductClick }) {
   return (
     <div className='product-item'>
       <Card style={{ width: '100%' }} className=' h-100 p-1'>
@@ -16,19 +18,17 @@ function ProductItem({ product, onShowDetailClick }) {
             className=''
           />
         </div>
-
         <Card.Body className='product-card'>
           <Card.Title>
-            {product.title} <h3>{product['rating'].rate} stars </h3>
-            <h4>{product['rating'].count} orders</h4>
+            {product.title} <h3>{product.rating.rate} stars </h3>
+            <h4>{product.rating.count} orders</h4>
           </Card.Title>
-          {/* <Card.Text>{product.description}</Card.Text> */}
         </Card.Body>
         <Card.Footer className='mt-auto'>
           <h3>Price: {product.price}usd</h3>
           <Link to={`/products/${product.id}`}>
             <Button
-              onClick={() => onShowDetailClick(product.id)}
+              onClick={() => onProductClick(product.id)}
               variant='primary'>
               Get details
             </Button>
@@ -40,3 +40,8 @@ function ProductItem({ product, onShowDetailClick }) {
 }
 
 export default ProductItem
+
+ProductItem.propTypes = {
+  product: productShape.isRequired,
+  onProductClick: PropTypes.func.isRequired,
+}

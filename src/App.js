@@ -31,7 +31,7 @@ function App() {
       })
   }, [])
 
-  const onShowDetailClick = (id) => {
+  const onProductClick = (id) => {
     fetch('http://demo5127360.mockable.io/product/' + id)
       .then((response) => {
         if (!response.ok) {
@@ -42,8 +42,6 @@ function App() {
       .then((data) => {
         const jsonData = JSON.parse(data);
         setProductData(jsonData.data);
-
-
       })
       .catch((error) => {
         console.error('Error in response:', error);
@@ -54,7 +52,7 @@ function App() {
     <BrowserRouter>
       <div className='App'>
         <Routes>
-          <Route exact path='/' element={<Main productsData={productsData} onShowDetailClick={onShowDetailClick} />} />
+          <Route exact path='/' element={<Main productsData={productsData} onProductClick={onProductClick} />} />
           <Route path='/login' element={<Login />} />
           <Route path='/registration' element={<Registration />} />
           <Route path="/products/:id" element={<ProductPage data={productData} />} />

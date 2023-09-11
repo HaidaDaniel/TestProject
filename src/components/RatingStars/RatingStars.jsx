@@ -1,4 +1,5 @@
 /** @format */
+import PropTypes from 'prop-types'
 import { useState } from 'react'
 import './index.css'
 
@@ -13,9 +14,6 @@ function RatingStars({ rating, isInput }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
-    // Отправляем значение рейтинга на бэкенд
-    // ...
   }
 
   return (
@@ -47,3 +45,8 @@ function RatingStars({ rating, isInput }) {
 }
 
 export default RatingStars
+
+RatingStars.propTypes = {
+  rating: PropTypes.number,
+  isInput: PropTypes.bool,
+}

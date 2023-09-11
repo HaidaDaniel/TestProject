@@ -33,3 +33,5 @@ function RegistrationBody() {
   )
 }
 export default RegistrationBody
+
+RegistrationBody.propTypes = {}

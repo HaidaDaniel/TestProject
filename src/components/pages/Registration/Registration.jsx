@@ -20,3 +20,5 @@ function Registration() {
   )
 }
 export default Registration
+
+Registration.propTypes = {}

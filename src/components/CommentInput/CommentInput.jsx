@@ -35,8 +35,8 @@ function CommentInput({ productId }) {
         <textarea
           id='text'
           name='text'
-          cols='30'
-          rows='10'
+          cols='65'
+          rows='9'
           value={text}
           onChange={(e) => setText(e.target.value)}
         />

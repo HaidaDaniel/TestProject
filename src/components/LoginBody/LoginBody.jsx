@@ -25,3 +25,5 @@ function LoginBody() {
   )
 }
 export default LoginBody
+
+LoginBody.propTypes = {}
