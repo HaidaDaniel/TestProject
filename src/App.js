@@ -1,3 +1,5 @@
+import { ThemeProvider } from 'styled-components';
+import theme from './theme'
 import Main from './components/pages/Main';
 import Login from './components/pages/Login';
 import Registration from './components/pages/Registration';
@@ -49,16 +51,18 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
-      <div className='App'>
-        <Routes>
-          <Route exact path='/' element={<Main productsData={productsData} onProductClick={onProductClick} />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/registration' element={<Registration />} />
-          <Route path="/products/:id" element={<ProductPage data={productData} />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <div className='App'>
+          <Routes>
+            <Route exact path='/' element={<Main productsData={productsData} onProductClick={onProductClick} />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/registration' element={<Registration />} />
+            <Route path="/products/:id" element={<ProductPage data={productData} />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </ThemeProvider>
 
   );
 }

@@ -25,7 +25,6 @@ function ProductPageBody({ data }) {
       <Row className='mt-6'>
         <Col md='6' xs='12' className=''>
           <StyledImgOfProduct
-            variant='top'
             src={data.image}
             alt={data.title}
             className='col-left'

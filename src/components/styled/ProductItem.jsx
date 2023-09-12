@@ -18,36 +18,49 @@ const ProductCard = styled.div`
   align-items: flex-end;
 `
 
-const ProductImage = styled.div`
+const ProductImageBox = styled.div`
   display: flex;
   padding: 1rem;
 `
+const ProductName = styled.p`
+  text-decoration: none;
+  color: #212529;
+`
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #212529;
 
+  &:hover {
+    text-decoration: underline;
+  }
+`
 function ProductItem({ product, onProductClick }) {
   return (
-    <StyledProductItem className='product-item'>
+    <StyledProductItem>
       <Card style={{ width: '100%' }} className=' h-100 p-1'>
-        <ProductImage className='d-flex flex-column h-100 justify-content-center'>
-          <Card.Img
-            variant='top'
-            src={product.image}
-            alt={product.title}
-            className=''
-          />
-        </ProductImage>
-        <ProductCard className='product-card'>
+        <ProductImageBox className='d-flex flex-column h-100 justify-content-center'>
+          <Link
+            to={`/products/${product.id}`}
+            onClick={() => onProductClick(product.id)}>
+            <Card.Img src={product.image} alt={product.title} />
+          </Link>
+        </ProductImageBox>
+        <ProductCard>
           <Card.Title>
-            {product.title} <br />
+            <StyledLink
+              onClick={() => onProductClick(product.id)}
+              to={`/products/${product.id}`}>
+              <ProductName>{product.title}</ProductName>
+              <br />
+            </StyledLink>
             <RatingStars rating={product.rating.rate}></RatingStars>
             <h4>{product.rating.count} orders</h4>
           </Card.Title>
         </ProductCard>
         <Card.Footer className='mt-auto'>
-          <h3>Price: {product.price}usd</h3>
+          <h5>Price: {product.price}usd</h5>
           <Link to={`/products/${product.id}`}>
-            <Button
-              onClick={() => onProductClick(product.id)}
-              variant='primary'>
+            <Button onClick={() => onProductClick(product.id)}>
               Get details
             </Button>
           </Link>

@@ -11,7 +11,6 @@ const RatingStarsContainer = styled.div`
 const Star = styled.span`
   font-size: 24px;
   color: #ccc;
-  margin-right: 2px;
 `
 
 const FilledStar = styled(Star)`
@@ -21,16 +20,21 @@ const FilledStar = styled(Star)`
 const HalfFilled = styled.span`
   position: relative;
   color: #f5a623;
+  content: "\2605";
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #f5a623;
 
-  &::before {
-    content: "\2605";
-    font-size: 14px;
-    position: absolute;
-    left: 0;
-    width: 50%;
-    overflow: hidden;
-    color: #f5a623;
-  }
+`
+const InputRating = styled.input`
+  max-width: 3rem;
+`
+const MainSpan = styled.span`
+  display: inline-block;
+  width: 24px;
 `
 
 function RatingStars({ rating, isInput, onRatingChange }) {
@@ -46,17 +50,17 @@ function RatingStars({ rating, isInput, onRatingChange }) {
         const starValue = (rating || ratingInput) - index
 
         return (
-          <>
+          <MainSpan key={index}>
             {starValue >= 0.8 && <FilledStar>&#9733;</FilledStar>}
             {starValue >= 0.3 && starValue < 0.8 && (
               <HalfFilled>&#9733;</HalfFilled>
             )}
             {starValue < 0.2 && <Star>&#9733;</Star>}
-          </>
+          </MainSpan>
         )
       })}
       {isInput && (
-        <input
+        <InputRating
           type='number'
           min='0'
           max='5'
