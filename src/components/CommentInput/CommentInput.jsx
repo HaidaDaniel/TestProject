@@ -29,7 +29,7 @@ function CommentInput({ productId }) {
   }
   return (
     <Form onSubmit={handleSubmit}>
-      <RatingStars rating={rating} isInput />
+      <RatingStars rating={rating} isInput onRatingChange={setRating} />
       <FormGroup>
         <label for='text'>Review text</label>
         <textarea

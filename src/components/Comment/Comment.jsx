@@ -8,7 +8,7 @@ function Comment({ author, text, rating }) {
     <Card style={{ width: '100%' }}>
       <Card.Body>
         <Card.Header className='d-flex'>
-          <RatingStars rating={rating} />
+          <RatingStars rating={rating} isInput={false} />
         </Card.Header>
         <Card.Subtitle className='mb-2 text-muted'></Card.Subtitle>
 

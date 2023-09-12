@@ -3,23 +3,19 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import './index.css'
 
-function RatingStars({ rating, isInput }) {
-  const [ratingInput, setRatingInput] = useState(0)
+function RatingStars({ rating, isInput, onRatingChange }) {
+  const [ratingInput, setRatingInput] = useState('')
 
-  const roundedRating = Math.round((rating | ratingInput) * 2) / 2
-
-  //   const handleClick = (index) => {
-  //     setRoundedRating(index + 0.5)
-  //   }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const handleInputBlur = () => {
+    onRatingChange(ratingInput)
   }
+
+  const roundedRating = Math.round((rating || ratingInput) * 2) / 2
 
   return (
     <div className='rating-stars'>
       {Array.from({ length: 5 }).map((_, index) => {
-        const starValue = index + 0.5
+        const starValue = (rating || ratingInput) - index
 
         let starClass = 'star'
 
@@ -27,9 +23,9 @@ function RatingStars({ rating, isInput }) {
           starClass += ' input'
         }
 
-        if (starValue <= roundedRating) {
+        if (starValue >= 1) {
           starClass += ' filled'
-        } else if (starValue - 0.5 < roundedRating) {
+        } else if ((starValue < 1) & (starValue >= 0.2)) {
           starClass += ' half-filled'
         }
 
@@ -39,14 +35,26 @@ function RatingStars({ rating, isInput }) {
           </span>
         )
       })}
-      {(rating || ratingInput) + '/' + 5}
+      {isInput && (
+        <input
+          type='number'
+          min='0'
+          max='5'
+          step='0.5'
+          value={ratingInput}
+          onChange={(e) => setRatingInput(e.target.value)}
+          onBlur={handleInputBlur}
+        />
+      )}
+      {rating || ''} {'/' + 5}
     </div>
   )
 }
 
-export default RatingStars
-
 RatingStars.propTypes = {
   rating: PropTypes.number,
   isInput: PropTypes.bool,
+  onRatingChange: PropTypes.func,
 }
+
+export default RatingStars
