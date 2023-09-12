@@ -1,7 +1,37 @@
 /** @format */
 import PropTypes from 'prop-types'
 import { useState } from 'react'
-import './index.css'
+import styled from 'styled-components'
+
+const RatingStarsContainer = styled.div`
+  display: inline-block;
+  margin-left: 0;
+`
+
+const Star = styled.span`
+  font-size: 24px;
+  color: #ccc;
+  margin-right: 2px;
+`
+
+const FilledStar = styled(Star)`
+  color: #f5a623;
+`
+
+const HalfFilled = styled.span`
+  position: relative;
+  color: #f5a623;
+
+  &::before {
+    content: "\2605";
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #f5a623;
+  }
+`
 
 function RatingStars({ rating, isInput, onRatingChange }) {
   const [ratingInput, setRatingInput] = useState('')
@@ -11,26 +41,18 @@ function RatingStars({ rating, isInput, onRatingChange }) {
   }
 
   return (
-    <div className='rating-stars'>
+    <RatingStarsContainer className='rating-stars'>
       {Array.from({ length: 5 }).map((_, index) => {
         const starValue = (rating || ratingInput) - index
 
-        let starClass = 'star'
-
-        if (isInput) {
-          starClass += ' input'
-        }
-
-        if (starValue >= 0.8) {
-          starClass += ' filled'
-        } else if ((starValue < 0.8) & (starValue >= 0.2)) {
-          starClass += ' half-filled'
-        }
-
         return (
-          <span key={index} className={starClass}>
-            &#9733;
-          </span>
+          <>
+            {starValue >= 0.8 && <FilledStar>&#9733;</FilledStar>}
+            {starValue >= 0.3 && starValue < 0.8 && (
+              <HalfFilled>&#9733;</HalfFilled>
+            )}
+            {starValue < 0.2 && <Star>&#9733;</Star>}
+          </>
         )
       })}
       {isInput && (
@@ -45,7 +67,7 @@ function RatingStars({ rating, isInput, onRatingChange }) {
         />
       )}
       {rating || ''} {'/' + 5}
-    </div>
+    </RatingStarsContainer>
   )
 }
 

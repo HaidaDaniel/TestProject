@@ -1,5 +1,5 @@
 /** @format */
-import RatingStars from '../RatingStars/RatingStars'
+import RatingStars from './RatingStars'
 import PropTypes from 'prop-types'
 import { productShape } from '../PropTypes/ProductShape'
 import { Link } from 'react-router-dom'
