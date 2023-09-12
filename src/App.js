@@ -1,7 +1,7 @@
-import Main from './components/pages/Main/Main';
-import Login from './components/pages/Login/Login';
-import Registration from './components/pages/Registration/Registration';
-import ProductPage from './components/pages/ProductPage/ProductPage';
+import Main from './components/pages/Main';
+import Login from './components/pages/Login';
+import Registration from './components/pages/Registration';
+import ProductPage from './components/pages/ProductPage';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';

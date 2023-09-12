@@ -1,25 +1,35 @@
 /** @format */
-import { detailedProductShape } from '../PropTypes/DetailedProductShape/DetailedProductShape'
+import { detailedProductShape } from '../PropTypes/DetailedProductShape'
 import { Row, Col } from 'react-bootstrap'
-import CommentInput from '../CommentInput/CommentInput'
-import CommentsBlock from '../CommentsBlock/ComentsBlock'
+import CommentInput from '../CommentInput'
+import CommentsBlock from '../ComentsBlock'
 import RatingStars from '../RatingStars/RatingStars'
-import './index.css'
+import styled from 'styled-components'
 
 function ProductPageBody({ data }) {
+  const StyledImgOfProduct = styled.img`
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      border-right: none !important;
+      padding-right: 0;
+    }
+  `
+
   return (
     <>
       <Row className='mt-6'>
         <Col md='6' xs='12' className=''>
-          {
-            <img
-              variant='top'
-              src={data.image}
-              alt={data.title}
-              className='col-left'
-              style={{ maxWidth: '100%', height: 'auto' }}
-            />
-          }
+          <StyledImgOfProduct
+            variant='top'
+            src={data.image}
+            alt={data.title}
+            className='col-left'
+            style={{ maxWidth: '100%', height: 'auto' }}></StyledImgOfProduct>
         </Col>
         <Col md='6' xs='12' className='col-right mt-3'>
           <Row className='mb-3'>

@@ -1,8 +1,7 @@
 /** @format */
 import PropTypes from 'prop-types'
 import { Card } from 'react-bootstrap'
-import RatingStars from '../RatingStars/RatingStars'
-import './index.css'
+import RatingStars from './RatingStars/RatingStars'
 
 function Comment({ author, text, rating }) {
   return (
