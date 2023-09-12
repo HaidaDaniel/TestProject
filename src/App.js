@@ -8,45 +8,31 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { fetchProducts, fetchProductById } from './api';
 
 
 
 function App() {
-  // const [logged, setLogged] = useState(false)
-  const [productsData, setProductsData] = useState([])
-  const [productData, setProductData] = useState('')
-
+  const [productsData, setProductsData] = useState([]);
+  const [productData, setProductData] = useState('');
 
   useEffect(() => {
-    fetch('http://demo5127360.mockable.io/products')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('No response is not OK')
-        }
-        return response.json()
-      })
+    fetchProducts()
       .then((data) => {
-        setProductsData(data)
+        setProductsData(data);
       })
       .catch((error) => {
-        console.error('Error is in response', error)
-      })
-  }, [])
+        console.error('Error in fetchProducts:', error);
+      });
+  }, []);
 
   const onProductClick = (id) => {
-    fetch('http://demo5127360.mockable.io/product/' + id)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Response is not OK');
-        }
-        return response.text();
-      })
+    fetchProductById(id)
       .then((data) => {
-        const jsonData = JSON.parse(data);
-        setProductData(jsonData.data);
+        setProductData(data);
       })
       .catch((error) => {
-        console.error('Error in response:', error);
+        console.error('Error in fetchProductById:', error);
       });
   };
 
@@ -63,7 +49,6 @@ function App() {
         </div>
       </BrowserRouter>
     </ThemeProvider>
-
   );
 }
 
