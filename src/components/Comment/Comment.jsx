@@ -1,4 +1,5 @@
 /** @format */
+import PropTypes from 'prop-types'
 import { Card } from 'react-bootstrap'
 import RatingStars from '../RatingStars/RatingStars'
 import './index.css'
@@ -24,3 +25,9 @@ function Comment({ author, text, rating }) {
 }
 
 export default Comment
+
+Comment.propTypes = {
+  author: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+}

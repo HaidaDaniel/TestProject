@@ -41,7 +41,7 @@ function ProductPageBody({ data }) {
             {data.comments && <CommentsBlock comments={data.comments} />}
           </Row>
           <Row className='border-top pt-3 mb-3'>
-            <CommentInput />
+            <CommentInput productId={data.id} />
           </Row>
         </Col>
       </Row>

@@ -1,4 +1,5 @@
 /** @format */
+import RatingStars from '../RatingStars/RatingStars'
 import PropTypes from 'prop-types'
 import { productShape } from '../PropTypes/ProductShape/ProductShape'
 import { Link } from 'react-router-dom'
@@ -20,7 +21,7 @@ function ProductItem({ product, onProductClick }) {
         </div>
         <Card.Body className='product-card'>
           <Card.Title>
-            {product.title} <h3>{product.rating.rate} stars </h3>
+            <RatingStars rating={product.rating.rate}></RatingStars>
             <h4>{product.rating.count} orders</h4>
           </Card.Title>
         </Card.Body>

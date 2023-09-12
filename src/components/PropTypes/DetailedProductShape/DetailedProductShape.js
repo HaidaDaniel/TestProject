@@ -13,7 +13,7 @@ export const ratingShape = PropTypes.shape({
 });
 
 export const detailedProductShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,

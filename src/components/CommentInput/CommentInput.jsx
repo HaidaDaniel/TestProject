@@ -1,4 +1,5 @@
 /** @format */
+import PropTypes from 'prop-types'
 import RatingStars from '../RatingStars/RatingStars'
 import { useState } from 'react'
 import { Form, FormGroup, Button } from 'react-bootstrap'
@@ -29,9 +30,9 @@ function CommentInput({ productId }) {
   }
   return (
     <Form onSubmit={handleSubmit}>
-      <RatingStars rating={rating} isInput onRatingChange={setRating} />
+      <RatingStars isInput onRatingChange={setRating} />
       <FormGroup>
-        <label for='text'>Review text</label>
+        <label htmlFor='text'>Review text</label>
         <textarea
           id='text'
           name='text'
@@ -46,3 +47,7 @@ function CommentInput({ productId }) {
   )
 }
 export default CommentInput
+
+CommentInput.propTypes = {
+  productId: PropTypes.string.isRequired,
+}

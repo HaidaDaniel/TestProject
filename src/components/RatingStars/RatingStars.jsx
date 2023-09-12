@@ -10,8 +10,6 @@ function RatingStars({ rating, isInput, onRatingChange }) {
     onRatingChange(ratingInput)
   }
 
-  const roundedRating = Math.round((rating || ratingInput) * 2) / 2
-
   return (
     <div className='rating-stars'>
       {Array.from({ length: 5 }).map((_, index) => {
@@ -23,9 +21,9 @@ function RatingStars({ rating, isInput, onRatingChange }) {
           starClass += ' input'
         }
 
-        if (starValue >= 1) {
+        if (starValue >= 0.8) {
           starClass += ' filled'
-        } else if ((starValue < 1) & (starValue >= 0.2)) {
+        } else if ((starValue < 0.8) & (starValue >= 0.2)) {
           starClass += ' half-filled'
         }
 
