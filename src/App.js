@@ -6,7 +6,6 @@ import Registration from './components/pages/Registration';
 import ProductPage from './components/pages/ProductPage';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { fetchProducts, fetchProductById } from './api';
 

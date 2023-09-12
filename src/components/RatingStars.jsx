@@ -1,41 +1,14 @@
 /** @format */
 import PropTypes from 'prop-types'
 import { useState } from 'react'
-import styled from 'styled-components'
-
-const RatingStarsContainer = styled.div`
-  display: inline-block;
-  margin-left: 0;
-`
-
-const Star = styled.span`
-  font-size: 24px;
-  color: #ccc;
-`
-
-const FilledStar = styled(Star)`
-  color: ${(props) => props.theme.colors.golden};
-`
-
-const HalfFilled = styled.span`
-  position: relative;
-  color:${(props) => props.theme.colors.golden} ;
-  content: "\2605";
-  font-size: 20px;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  color: ${(props) => props.theme.colors.golden};
-
-`
-const InputRating = styled.input`
-  max-width: 3rem;
-`
-const MainSpan = styled.span`
-  display: inline-block;
-  width: 24px;
-`
+import {
+  RatingStarsContainer,
+  Star,
+  FilledStar,
+  HalfFilled,
+  InputRating,
+  MainSpan,
+} from './styled/RatingStarsStyles'
 
 function RatingStars({ rating, isInput, onRatingChange }) {
   const [ratingInput, setRatingInput] = useState('')

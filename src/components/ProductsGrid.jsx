@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 import { productsDataPropTypes } from './PropTypes/ProductShape'
 import { Row, Col } from 'react-bootstrap'
-import ProductItem from './styled/ProductItem'
+import ProductItem from './ProductItem'
 
 function ProductsGrid({ productsData, onProductClick }) {
   return (

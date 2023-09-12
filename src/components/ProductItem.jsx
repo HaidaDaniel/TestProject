@@ -1,41 +1,19 @@
 /** @format */
-import RatingStars from './RatingStars'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { productShape } from '../PropTypes/ProductShape'
-import { Link } from 'react-router-dom'
+import { productShape } from './PropTypes/ProductShape'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import RatingStars from './RatingStars'
+import {
+  StyledProductItem,
+  ProductCard,
+  ProductImageBox,
+  ProductName,
+  StyledLink,
+} from './styled/ProductsItemStyles'
 
-const StyledProductItem = styled.div`
-  margin: 0.3rem;
-  height: 48rem;
-`
-
-const ProductCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  justify-content: center;
-  align-items: center;
-`
-
-const ProductImageBox = styled.div`
-  display: flex;
-  padding: 1rem;
-`
-const ProductName = styled.p`
-  text-decoration: none;
-  color: #212529;
-`
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #212529;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`
 function ProductItem({ product, onProductClick }) {
   return (
     <StyledProductItem>
