@@ -9,13 +9,15 @@ import styled from 'styled-components'
 
 const StyledProductItem = styled.div`
   margin: 0.3rem;
-  height: 51rem;
+  height: 48rem;
 `
 
 const ProductCard = styled.div`
   display: flex;
+  flex-direction: column;
+  height: 300px;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 `
 
 const ProductImageBox = styled.div`
@@ -53,9 +55,11 @@ function ProductItem({ product, onProductClick }) {
               <ProductName>{product.title}</ProductName>
               <br />
             </StyledLink>
+          </Card.Title>
+          <div>
             <RatingStars rating={product.rating.rate}></RatingStars>
             <h4>{product.rating.count} orders</h4>
-          </Card.Title>
+          </div>
         </ProductCard>
         <Card.Footer className='mt-auto'>
           <h5>Price: {product.price}usd</h5>
