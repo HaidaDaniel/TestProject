@@ -1,13 +1,21 @@
 /** @format */
 import Header from '../Header'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import LoginBody from '../LoginBody'
 
 function Login() {
   return (
     <Container>
-      <Header></Header>
-      <LoginBody></LoginBody>
+      <Row>
+        <Col>
+          <Header></Header>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <LoginBody></LoginBody>
+        </Col>
+      </Row>
     </Container>
   )
 }

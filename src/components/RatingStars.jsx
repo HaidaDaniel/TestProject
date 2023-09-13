@@ -18,7 +18,7 @@ function RatingStars({ rating, isInput, onRatingChange }) {
   }
 
   return (
-    <RatingStarsContainer className='rating-stars'>
+    <RatingStarsContainer>
       {Array.from({ length: 5 }).map((_, index) => {
         const starValue = (rating || ratingInput) - index
 

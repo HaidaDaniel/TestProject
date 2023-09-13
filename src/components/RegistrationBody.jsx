@@ -1,37 +1,45 @@
 /** @format */
 
-import { Form, Button, Col, Row } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
+import {
+  StyledForm,
+  StyledCol,
+  StyledHeading,
+  StyledFormGroup,
+  StyledFormLabel,
+  StyledFormControl,
+  StyledSubmitButton,
+} from './styled/RegistrationBodyStyles'
 
 function RegistrationBody() {
   return (
     <Row>
-      <Form className=' pt-3'>
-        <Col xs={12} md={6} className='mx-auto border rounded'>
-          <h3>Registration Form</h3>
-          <Form.Group className='mb-3 mx-4 mt-3' controlId='formGroupEmail'>
-            <Form.Label>Email address </Form.Label>
-            <Form.Control type='email' placeholder='Email address' />
-          </Form.Group>
-          <Form.Group className='mb-3 mx-4' controlId='formGroupFirstName'>
-            <Form.Label>First name </Form.Label>
-            <Form.Control placeholder='First name' />
-          </Form.Group>
-          <Form.Group className='mb-3 mx-4' controlId='formGroupLastName'>
-            <Form.Label>LastName </Form.Label>
-            <Form.Control placeholder='LastName' />
-          </Form.Group>
-          <Form.Group className='mb-3 mx-4' controlId='formGroupPassword'>
-            <Form.Label>Password</Form.Label>
-            <Form.Control type='password' placeholder='Password' />
-          </Form.Group>
-          <Button variant='primary' type='submit' className='mb-3'>
+      <StyledForm>
+        <StyledCol xs={12} md={6}>
+          <StyledHeading>Registration Form</StyledHeading>
+          <StyledFormGroup controlId='formGroupEmail'>
+            <StyledFormLabel>Email address</StyledFormLabel>
+            <StyledFormControl type='email' placeholder='Email address' />
+          </StyledFormGroup>
+          <StyledFormGroup controlId='formGroupFirstName'>
+            <StyledFormLabel>First name</StyledFormLabel>
+            <StyledFormControl placeholder='First name' />
+          </StyledFormGroup>
+          <StyledFormGroup controlId='formGroupLastName'>
+            <StyledFormLabel>LastName</StyledFormLabel>
+            <StyledFormControl placeholder='LastName' />
+          </StyledFormGroup>
+          <StyledFormGroup controlId='formGroupPassword'>
+            <StyledFormLabel>Password</StyledFormLabel>
+            <StyledFormControl type='password' placeholder='Password' />
+          </StyledFormGroup>
+          <StyledSubmitButton variant='primary' type='submit'>
             Registration
-          </Button>
-        </Col>
-      </Form>
+          </StyledSubmitButton>
+        </StyledCol>
+      </StyledForm>
     </Row>
   )
 }
-export default RegistrationBody
 
-RegistrationBody.propTypes = {}
+export default RegistrationBody

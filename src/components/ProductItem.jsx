@@ -8,17 +8,18 @@ import { Link } from 'react-router-dom'
 import RatingStars from './RatingStars'
 import {
   StyledProductItem,
+  CardStyled,
   ProductCard,
   ProductImageBox,
   ProductName,
   StyledLink,
-} from './styled/ProductsItemStyles'
+} from './styled/ProductItemStyles'
 
 function ProductItem({ product, onProductClick }) {
   return (
     <StyledProductItem>
-      <Card style={{ width: '100%' }} className=' h-100 p-1'>
-        <ProductImageBox className='d-flex flex-column h-100 justify-content-center'>
+      <CardStyled>
+        <ProductImageBox>
           <Link
             to={`/products/${product.id}`}
             onClick={() => onProductClick(product.id)}>
@@ -39,7 +40,7 @@ function ProductItem({ product, onProductClick }) {
             <h4>{product.rating.count} orders</h4>
           </div>
         </ProductCard>
-        <Card.Footer className='mt-auto'>
+        <Card.Footer>
           <h5>Price: {product.price}usd</h5>
           <Link to={`/products/${product.id}`}>
             <Button onClick={() => onProductClick(product.id)}>
@@ -47,7 +48,7 @@ function ProductItem({ product, onProductClick }) {
             </Button>
           </Link>
         </Card.Footer>
-      </Card>
+      </CardStyled>
     </StyledProductItem>
   )
 }

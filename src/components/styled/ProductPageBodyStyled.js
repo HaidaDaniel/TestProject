@@ -7,7 +7,7 @@ padding-right: 2rem;
 padding-bottom: 2rem;
 margin-bottom: 2rem;
 
-@media (max-width: 768px) {
+@media ${props => props.theme.media.sm},${props => props.theme.media.md} {
   border-right: none !important;
   padding-right: 0;
 }

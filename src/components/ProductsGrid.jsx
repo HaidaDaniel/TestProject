@@ -1,19 +1,20 @@
 /** @format */
+import React from 'react'
 import PropTypes from 'prop-types'
 import { productsDataPropTypes } from './PropTypes/ProductShape'
-import { Row, Col } from 'react-bootstrap'
 import ProductItem from './ProductItem'
+import { StyledRow, StyledCol } from './styled/ProductsGridStyles'
 
 function ProductsGrid({ productsData, onProductClick }) {
   return (
-    <Row className='mt-1'>
+    <StyledRow>
       {productsData &&
-        productsData.map((product, index) => (
-          <Col key={index} xs={12} sm={6} md={4} lg={3} className='my-2'>
+        productsData.map((product) => (
+          <StyledCol key={product.id} xs={12} sm={6} md={4} lg={3}>
             <ProductItem product={product} onProductClick={onProductClick} />
-          </Col>
+          </StyledCol>
         ))}
-    </Row>
+    </StyledRow>
   )
 }
 

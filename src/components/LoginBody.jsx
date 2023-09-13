@@ -1,29 +1,36 @@
 /** @format */
-
-import { Form, Button, Col, Row } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
+import {
+  StyledForm,
+  StyledCol,
+  StyledHeading,
+  StyledFormGroup,
+  StyledFormLabel,
+  StyledFormControl,
+  StyledSubmitButton,
+} from './styled/LoginBodyStyles'
 
 function LoginBody() {
   return (
     <Row>
-      <Form className='pt-3'>
-        <Col xs={12} md={6} className='mx-auto border rounded pt-1'>
-          <h3>Login</h3>
-          <Form.Group className='my-3 mx-4' controlId='formGroupEmail'>
-            <Form.Label>Email address </Form.Label>
-            <Form.Control type='email' placeholder='Email address' />
-          </Form.Group>
-          <Form.Group className='mb-3 mx-4' controlId='formGroupPassword'>
-            <Form.Label>Password</Form.Label>
-            <Form.Control type='password' placeholder='Password' />
-          </Form.Group>
-          <Button variant='primary' type='submit' className='mb-3'>
+      <StyledForm className='pt-3'>
+        <StyledCol xs={12} md={6}>
+          <StyledHeading>Login</StyledHeading>
+          <StyledFormGroup controlId='formGroupEmail'>
+            <StyledFormLabel>Email address</StyledFormLabel>
+            <StyledFormControl type='email' placeholder='Email address' />
+          </StyledFormGroup>
+          <StyledFormGroup controlId='formGroupPassword'>
+            <StyledFormLabel>Password</StyledFormLabel>
+            <StyledFormControl type='password' placeholder='Password' />
+          </StyledFormGroup>
+          <StyledSubmitButton variant='primary' type='submit'>
             Login
-          </Button>
-        </Col>
-      </Form>
+          </StyledSubmitButton>
+        </StyledCol>
+      </StyledForm>
     </Row>
   )
 }
-export default LoginBody
 
-LoginBody.propTypes = {}
+export default LoginBody

@@ -11,19 +11,19 @@ export const Star = styled.span`
 `;
 
 export const FilledStar = styled(Star)`
-  color: #f5a623;
+  color: ${props => props.color || props.theme.colors.golden};
 `;
 
 export const HalfFilled = styled.span`
   position: relative;
-  color: #f5a623;
+  color: ${props => props.color || props.theme.colors.golden};
   content: "\2605";
   font-size: 20px;
   position: absolute;
   left: 0;
   width: 100%;
   overflow: hidden;
-  color: #f5a623;
+  color:${props => props.color || props.theme.colors.golden};
 `;
 
 export const InputRating = styled.input`
