@@ -8,7 +8,7 @@ import { StyledImgOfProduct } from './styled/ProductPageBodyStyled'
 
 function ProductPageBody({ data }) {
   return (
-    <>
+    <div>
       <Row className='mt-6'>
         <Col md='6' xs='12' className=''>
           <StyledImgOfProduct
@@ -41,7 +41,7 @@ function ProductPageBody({ data }) {
           </Row>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 export default ProductPageBody

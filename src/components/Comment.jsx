@@ -1,25 +1,25 @@
 /** @format */
 import PropTypes from 'prop-types'
-import { Card } from 'react-bootstrap'
+import {
+  StyledCard,
+  StyledCardBody,
+  StyledCardHeader,
+  StyledCardText,
+  StyledAuthorText,
+} from './styled/CommentStyles'
 import RatingStars from './RatingStars'
 
 function Comment({ author, text, rating }) {
   return (
-    <Card style={{ width: '100%' }}>
-      <Card.Body>
-        <Card.Header className='d-flex'>
+    <StyledCard>
+      <StyledCardBody>
+        <StyledCardHeader>
           <RatingStars rating={rating} isInput={false} />
-        </Card.Header>
-        <Card.Subtitle className='mb-2 text-muted'></Card.Subtitle>
-
-        <Card.Text className='' style={{ textAlign: 'left' }}>
-          {text}
-        </Card.Text>
-        <Card.Text className='d-flex justify-content: flex-end'>
-          {author}
-        </Card.Text>
-      </Card.Body>
-    </Card>
+        </StyledCardHeader>
+        <StyledCardText>{text}</StyledCardText>
+        <StyledAuthorText>{author}</StyledAuthorText>
+      </StyledCardBody>
+    </StyledCard>
   )
 }
 

@@ -7,7 +7,7 @@ const theme = {
         error: '#dc3545',
         golden: '#f5a623',
         normal: '#212529',
-
+        bordercolor: '#dee2e6',
     },
     media: {
         sm: '(max-width: 576px)',

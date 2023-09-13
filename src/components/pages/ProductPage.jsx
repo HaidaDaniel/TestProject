@@ -2,19 +2,13 @@
 // import { detailedProductShape } from '../../PropTypes/DetailedProductShape/DetailedProductShape'
 import Header from '../Header'
 import ProductPageBody from '../ProductPageBody'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
 function ProductPage({ data }) {
   return (
     <Container>
-      <Row>
-        <Col>
-          <Header></Header>
-        </Col>
-      </Row>
-      <Row>
-        <Col>{data && <ProductPageBody data={data}></ProductPageBody>}</Col>
-      </Row>
+      <Header></Header>
+      {data && <ProductPageBody data={data}></ProductPageBody>}
     </Container>
   )
 }

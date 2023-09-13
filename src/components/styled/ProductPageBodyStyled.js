@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+export const StyledDivOfProduct = styled.div`
+margin-top:2rem`
 
 export const StyledImgOfProduct = styled.img`
 border-right: 1px solid grey;
