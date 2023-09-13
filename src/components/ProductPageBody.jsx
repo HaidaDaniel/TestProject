@@ -9,7 +9,7 @@ import { StyledImgOfProduct } from './styled/ProductPageBodyStyled'
 function ProductPageBody({ data }) {
   return (
     <div>
-      <Row className='mt-6'>
+      <Row>
         <Col md='6' xs='12' className=''>
           <StyledImgOfProduct
             src={data.image}

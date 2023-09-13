@@ -12,10 +12,10 @@ import RatingStars from './RatingStars'
 function Comment({ author, text, rating }) {
   return (
     <StyledCard>
+      <StyledCardHeader>
+        <RatingStars rating={rating} isInput={false} />
+      </StyledCardHeader>
       <StyledCardBody>
-        <StyledCardHeader>
-          <RatingStars rating={rating} isInput={false} />
-        </StyledCardHeader>
         <StyledCardText>{text}</StyledCardText>
         <StyledAuthorText>{author}</StyledAuthorText>
       </StyledCardBody>

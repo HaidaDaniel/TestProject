@@ -3,7 +3,11 @@ import PropTypes from 'prop-types'
 import RatingStars from './RatingStars'
 import { useState } from 'react'
 import { Form, Button, Modal } from 'react-bootstrap'
-import { StyledFormGroup } from './styled/CommentInputStyles'
+import {
+  StyledFormGroup,
+  StyledFormLabel,
+  StyledTextArea,
+} from './styled/CommentInputStyles'
 
 function CommentInput({ productId }) {
   const [rating, setRating] = useState(null)
@@ -55,16 +59,19 @@ function CommentInput({ productId }) {
     <>
       <Form onSubmit={handleSubmit}>
         <StyledFormGroup>
-          <Form.Label>Review</Form.Label>
-          <RatingStars isInput onRatingChange={setRating} />
-
-          <Form.Control
-            as='textarea'
-            placeholder='Enter review here ...'
-            rows={3}
-          />
+          <StyledFormLabel>
+            Review
+            <RatingStars isInput onRatingChange={setRating} />
+            <Button type='submit'>Send</Button>
+          </StyledFormLabel>
+          <StyledTextArea>
+            <Form.Control
+              as='textarea'
+              placeholder='Enter review here ...'
+              rows={3}
+            />
+          </StyledTextArea>
         </StyledFormGroup>
-        <Button type='submit'>Send</Button>
       </Form>
       <Modal show={showModal} onHide={closeModal}>
         <Modal.Header closeButton>

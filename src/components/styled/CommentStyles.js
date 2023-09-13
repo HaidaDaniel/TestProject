@@ -6,7 +6,7 @@ export const StyledCard = styled(Card)`
 `;
 
 export const StyledCardBody = styled(Card.Body)`
-  
+  padding:1rem;
 `;
 
 export const StyledCardHeader = styled(Card.Header)`
