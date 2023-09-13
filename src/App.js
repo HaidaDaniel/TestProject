@@ -4,28 +4,23 @@ import Main from './components/pages/Main';
 import Login from './components/pages/Login';
 import Registration from './components/pages/Registration';
 import ProductPage from './components/pages/ProductPage';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { fetchProducts, fetchProductById } from './api';
+import { fetchProductById } from './api';
 import GlobalStyles from './GlobalStyles';
+import { Provider } from 'react-redux';
+import store from './store/store'
+
+
 
 
 
 
 function App() {
-  const [productsData, setProductsData] = useState([]);
+
   const [productData, setProductData] = useState('');
 
-  useEffect(() => {
-    fetchProducts()
-      .then((data) => {
-        setProductsData(data);
-      })
-      .catch((error) => {
-        console.error('Error in fetchProducts:', error);
-      });
-  }, []);
 
   const onProductClick = (id) => {
     fetchProductById(id)
@@ -38,19 +33,21 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <BrowserRouter>
-        <div className='App'>
-          <Routes>
-            <Route exact path='/' element={<Main productsData={productsData} onProductClick={onProductClick} />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/registration' element={<Registration />} />
-            <Route path="/products/:id" element={<ProductPage data={productData} />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <BrowserRouter>
+          <div className='App'>
+            <Routes>
+              <Route exact path='/' element={<Main onProductClick={onProductClick} />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/registration' element={<Registration />} />
+              <Route path="/products/:id" element={<ProductPage data={productData} />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </ThemeProvider>
+    </Provider>
   );
 }
 
