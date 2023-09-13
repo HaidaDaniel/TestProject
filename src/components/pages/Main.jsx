@@ -4,25 +4,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { productsDataPropTypes } from '../PropTypes/ProductShape'
 import Header from '../Header'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import ProductsGrid from '../ProductsGrid'
 
 function Main({ productsData, onProductClick }) {
   return (
     <Container>
-      <Row>
-        <Col>
-          <Header></Header>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <ProductsGrid
-            productsData={productsData}
-            onProductClick={onProductClick}
-          />
-        </Col>
-      </Row>
+      <Header />
+      <ProductsGrid
+        productsData={productsData}
+        onProductClick={onProductClick}
+      />
     </Container>
   )
 }

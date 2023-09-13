@@ -6,19 +6,19 @@ export const StyledProductItem = styled.div`
   margin: 0.3rem;
   height: 48rem;
   @media ${props => props.theme.media.lg} {
-    height:40rem
+    height:42rem
   }
   @media ${props => props.theme.media.md} {
-    height:35rem
+    height:45rem
   }
   @media ${props => props.theme.media.sm}{
-    height:50rem
+    height:60rem
   }
 `;
 export const CardStyled = styled(Card)`
 width: 100%;
 height:100%;
-padind:0.25rem;
+padding:0.25rem;
 `
 
 export const ProductCard = styled.div`

@@ -6,6 +6,7 @@ const theme = {
         success: '#28a745',
         error: '#dc3545',
         golden: '#f5a623',
+        normal: '#212529',
 
     },
     media: {

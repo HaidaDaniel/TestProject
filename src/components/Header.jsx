@@ -1,21 +1,21 @@
 /** @format */
 
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
+import {
+  StyledNavbar,
+  StyledNavbarBrand,
+  StyledNavbarCollapse,
+} from './styled/HeaderStyles'
 
 function Header() {
   return (
-    <Navbar
-      sticky='top'
-      bg='primary'
-      expand='lg'
-      className='justify-content-between my-2 rounded'>
-      <Navbar.Brand as={Link} to='/' href='#' className='navbar-shop mx-4'>
+    <StyledNavbar expand='lg'>
+      <StyledNavbarBrand as={Link} to='/' href='#' className='mx-4'>
         Shop
-      </Navbar.Brand>
+      </StyledNavbarBrand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
-      <Navbar.Collapse
+      <StyledNavbarCollapse
         id='basic-navbar-nav'
         className='justify-content-end mx-2'>
         <Nav className='ml-auto mx-2'>
@@ -26,8 +26,8 @@ function Header() {
             Login
           </Nav.Link>
         </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+      </StyledNavbarCollapse>
+    </StyledNavbar>
   )
 }
 

@@ -28,7 +28,7 @@ function RatingStars({ rating, isInput, onRatingChange }) {
             {starValue >= 0.3 && starValue < 0.8 && (
               <HalfFilled>&#9733;</HalfFilled>
             )}
-            {starValue < 0.2 && <Star>&#9733;</Star>}
+            {starValue < 0.3 && <Star>&#9733;</Star>}
           </MainSpan>
         )
       })}
