@@ -9,7 +9,8 @@ import Header from '../Header'
 import ProductsGrid from '../ProductsGrid'
 
 function Main({ onProductClick }) {
-  const dataR = useSelector((state) => state.products)
+  const dataR = useSelector((state) => state.products.products)
+
   console.log(dataR)
 
   return (

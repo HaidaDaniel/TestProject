@@ -1,6 +1,7 @@
 /** @format */
 import { detailedProductShape } from './PropTypes/DetailedProductShape'
 import { Row, Col } from 'react-bootstrap'
+import { useSelector } from 'react-redux/es/hooks/useSelector'
 
 import CommentInput from './CommentInput'
 import CommentsBlock from './ComentsBlock'
@@ -8,6 +9,9 @@ import RatingStars from './RatingStars'
 import { StyledImgOfProduct } from '../styled/ProductPageBodyStyled'
 
 function ProductPageBody({ data }) {
+  const dataT = useSelector((state) => state.product)
+  console.log(dataT)
+
   return (
     <div>
       <Row>

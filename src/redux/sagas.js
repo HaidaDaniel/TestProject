@@ -3,7 +3,7 @@ import {
     FETCH_PRODUCTS,
     fetchProductSuccess,
     fetchProductFailure,
-} from './actions';
+} from './products';
 import { fetchProducts } from '../api';
 
 function* fetchProductsSaga() {
@@ -15,8 +15,8 @@ function* fetchProductsSaga() {
     }
 }
 
-function* rootSaga() {
+function* rootProductsSaga() {
     yield takeEvery(FETCH_PRODUCTS, fetchProductsSaga);
 }
 
-export default rootSaga;
+export default rootProductsSaga;

@@ -1,7 +1,7 @@
 /** @format */
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { fetchProducts } from '../saga/actions'
+import { fetchProductsRequest } from '../redux/products'
 import PropTypes from 'prop-types'
 
 import ProductItem from './ProductItem'
@@ -9,10 +9,10 @@ import { StyledRow, StyledCol } from '../styled/ProductsGridStyles'
 
 function ProductsGrid({ onProductClick }) {
   const dispatch = useDispatch()
-  const products = useSelector((state) => state.products)
+  const products = useSelector((state) => state.products.products)
 
   useEffect(() => {
-    dispatch(fetchProducts())
+    dispatch(fetchProductsRequest())
   }, [])
 
   return (

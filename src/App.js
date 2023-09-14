@@ -1,13 +1,10 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux';
-import store from './store/store'
+import store from './redux/store'
 import { ThemeProvider } from 'styled-components';
 
-import Main from './components/pages/Main';
-import Login from './components/pages/Login';
-import Registration from './components/pages/Registration';
-import ProductPage from './components/pages/ProductPage';
+import { Main, Login, Registration, ProductPage } from './components/index';
 
 import { fetchProductById } from './api';
 import GlobalStyles from './styled/GlobalStyles';
