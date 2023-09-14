@@ -11,8 +11,8 @@ import {
   CardStyled,
   ProductCard,
   ProductImageBox,
-  ProductName,
   StyledLink,
+  StyledCardTitle,
 } from './styled/ProductItemStyles'
 
 function ProductItem({ product, onProductClick }) {
@@ -27,14 +27,13 @@ function ProductItem({ product, onProductClick }) {
           </Link>
         </ProductImageBox>
         <ProductCard>
-          <Card.Title>
+          <StyledCardTitle>
             <StyledLink
               onClick={() => onProductClick(product.id)}
               to={`/products/${product.id}`}>
-              <ProductName>{product.title}</ProductName>
-              <br />
+              {product.title}
             </StyledLink>
-          </Card.Title>
+          </StyledCardTitle>
           <div>
             <RatingStars rating={product.rating.rate}></RatingStars>
             <h4>{product.rating.count} orders</h4>

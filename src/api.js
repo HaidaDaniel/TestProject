@@ -1,4 +1,4 @@
-export async function fetchProducts() {
+export const fetchProducts = async () => {
     try {
         const response = await fetch('http://demo5127360.mockable.io/products');
         if (!response.ok) {
@@ -10,9 +10,9 @@ export async function fetchProducts() {
         console.error('Error in fetchProducts:', error);
         throw error;
     }
-}
+};
 
-export async function fetchProductById(id) {
+export const fetchProductById = async (id) => {
     try {
         const response = await fetch(`http://demo5127360.mockable.io/product/${id}`);
         if (!response.ok) {
@@ -25,4 +25,4 @@ export async function fetchProductById(id) {
         console.error('Error in fetchProductById:', error);
         throw error;
     }
-}
+};
