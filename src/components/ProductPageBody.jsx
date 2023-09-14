@@ -1,6 +1,7 @@
 /** @format */
 import { detailedProductShape } from './PropTypes/DetailedProductShape'
 import { Row, Col } from 'react-bootstrap'
+
 import CommentInput from './CommentInput'
 import CommentsBlock from './ComentsBlock'
 import RatingStars from './RatingStars'

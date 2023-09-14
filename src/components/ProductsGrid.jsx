@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { fetchProducts } from '../saga/actions'
 import PropTypes from 'prop-types'
+
 import ProductItem from './ProductItem'
 import { StyledRow, StyledCol } from '../styled/ProductsGridStyles'
 

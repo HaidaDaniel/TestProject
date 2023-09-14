@@ -1,11 +1,12 @@
 /** @format */
 
 import React from 'react'
-import PropTypes from 'prop-types'
-import Header from '../Header'
-import { Container } from 'react-bootstrap'
-import ProductsGrid from '../ProductsGrid'
 import { useSelector } from 'react-redux'
+import PropTypes from 'prop-types'
+import { Container } from 'react-bootstrap'
+
+import Header from '../Header'
+import ProductsGrid from '../ProductsGrid'
 
 function Main({ onProductClick }) {
   const dataR = useSelector((state) => state.products)

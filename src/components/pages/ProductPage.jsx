@@ -1,8 +1,9 @@
 /** @format */
 // import { detailedProductShape } from '../../PropTypes/DetailedProductShape/DetailedProductShape'
+import { Container } from 'react-bootstrap'
+
 import Header from '../Header'
 import ProductPageBody from '../ProductPageBody'
-import { Container } from 'react-bootstrap'
 
 function ProductPage({ data }) {
   return (

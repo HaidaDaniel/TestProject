@@ -1,6 +1,7 @@
 /** @format */
-import Header from '../Header'
 import { Container, Row, Col } from 'react-bootstrap'
+
+import Header from '../Header'
 import LoginBody from '../LoginBody'
 
 function Login() {

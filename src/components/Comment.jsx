@@ -1,5 +1,6 @@
 /** @format */
 import PropTypes from 'prop-types'
+
 import {
   StyledCard,
   StyledCardBody,

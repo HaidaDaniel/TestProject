@@ -1,10 +1,10 @@
 /** @format */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { productShape } from './PropTypes/ProductShape'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
+
 import RatingStars from './RatingStars'
 import {
   StyledProductItem,
@@ -14,6 +14,7 @@ import {
   StyledLink,
   StyledCardTitle,
 } from '../styled/ProductItemStyles'
+import { productShape } from './PropTypes/ProductShape'
 
 function ProductItem({ product, onProductClick }) {
   return (
