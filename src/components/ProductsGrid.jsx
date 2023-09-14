@@ -2,12 +2,11 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { fetchProductsRequest } from '../redux/products'
-import PropTypes from 'prop-types'
 
-import ProductItem from './ProductItem'
+import { ProductItem } from './index'
 import { StyledRow, StyledCol } from '../styled/ProductsGridStyles'
 
-function ProductsGrid({ onProductClick }) {
+function ProductsGrid() {
   const dispatch = useDispatch()
   const products = useSelector((state) => state.products.products)
 
@@ -20,7 +19,7 @@ function ProductsGrid({ onProductClick }) {
       {products &&
         products.map((product) => (
           <StyledCol key={product.id} xs={12} sm={6} md={4} lg={3}>
-            <ProductItem product={product} onProductClick={onProductClick} />
+            <ProductItem product={product} />
           </StyledCol>
         ))}
     </StyledRow>
@@ -29,6 +28,4 @@ function ProductsGrid({ onProductClick }) {
 
 export default ProductsGrid
 
-ProductsGrid.propTypes = {
-  onProductClick: PropTypes.func.isRequired,
-}
+ProductsGrid.propTypes = {}

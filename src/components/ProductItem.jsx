@@ -1,9 +1,7 @@
 /** @format */
-import PropTypes from 'prop-types'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
 
 import RatingStars from './RatingStars'
 import {
@@ -15,29 +13,19 @@ import {
   StyledCardTitle,
 } from '../styled/ProductItemStyles'
 import { productShape } from './PropTypes/ProductShape'
-import { fetchProductRequest } from '../redux/product'
 
 function ProductItem({ product }) {
-  const dispatch = useDispatch()
-
-  const handleProductClick = () => {
-    console.log(product.id)
-    dispatch(fetchProductRequest(product.id))
-  }
-
   return (
     <StyledProductItem>
       <CardStyled>
         <ProductImageBox>
-          <Link to={`/products/${product.id}`} onClick={handleProductClick}>
+          <Link to={`/products/${product.id}`}>
             <Card.Img src={product.image} alt={product.title} />
           </Link>
         </ProductImageBox>
         <ProductCard>
           <StyledCardTitle>
-            <StyledLink
-              onClick={handleProductClick}
-              to={`/products/${product.id}`}>
+            <StyledLink to={`/products/${product.id}`}>
               {product.title}
             </StyledLink>
           </StyledCardTitle>
@@ -49,7 +37,7 @@ function ProductItem({ product }) {
         <Card.Footer>
           <h5>Price: {product.price}usd</h5>
           <Link to={`/products/${product.id}`}>
-            <Button onClick={handleProductClick}>Get details</Button>
+            <Button>Get details</Button>
           </Link>
         </Card.Footer>
       </CardStyled>
@@ -61,5 +49,4 @@ export default ProductItem
 
 ProductItem.propTypes = {
   product: productShape.isRequired,
-  onProductClick: PropTypes.func.isRequired,
 }

@@ -1,8 +1,7 @@
 /** @format */
-import Header from '../Header'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import RegistrationBody from '../RegistrationBody'
+import { RegistrationBody, Header } from '../index'
 
 function Registration() {
   return (

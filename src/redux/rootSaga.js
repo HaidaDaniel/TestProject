@@ -8,6 +8,7 @@ function* fetchProductsSaga() {
     try {
         const data = yield call(fetchProducts);
         yield put(fetchProductsSuccess(data));
+
     } catch (error) {
         yield put(fetchProductsFailure(error));
     }
@@ -22,6 +23,7 @@ function* fetchProductSaga(action) {
     try {
         const { id } = action;
         const data = yield call(fetchProductById, id);
+        yield localStorage.setItem('product', JSON.stringify(data));
         yield put(fetchProductSuccess(data));
     } catch (error) {
         yield put(fetchProductFailure(error));

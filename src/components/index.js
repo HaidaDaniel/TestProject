@@ -10,4 +10,5 @@ export { default as CommentInput } from './CommentInput';
 export { default as Comment } from './Comment';
 export { default as ProductItem } from './ProductItem';
 export { default as ProductPageBody } from './ProductPageBody';
+export { default as LoginBody } from './LoginBody';
 export { default as RatingStars } from './RatingStars';

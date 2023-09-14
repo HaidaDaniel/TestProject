@@ -1,8 +1,9 @@
 /** @format */
 import PropTypes from 'prop-types'
-import RatingStars from './RatingStars'
 import { useState } from 'react'
 import { Form, Button, Modal } from 'react-bootstrap'
+
+import { RatingStars } from './index'
 
 import {
   StyledFormGroup,

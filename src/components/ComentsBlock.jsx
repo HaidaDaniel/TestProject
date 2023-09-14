@@ -1,9 +1,8 @@
 /** @format */
-import React from 'react'
 import PropTypes from 'prop-types'
 import { Stack } from 'react-bootstrap'
 
-import Comment from './Comment'
+import { Comment } from './index'
 import { StyledCommentsBlock } from '../styled/CommentsBlockStyles'
 
 function CommentsBlock({ comments }) {

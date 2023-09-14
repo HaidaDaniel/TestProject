@@ -1,6 +1,8 @@
 /** @format */
 import PropTypes from 'prop-types'
 
+import { RatingStars } from './index'
+
 import {
   StyledCard,
   StyledCardBody,
@@ -8,7 +10,6 @@ import {
   StyledCardText,
   StyledAuthorText,
 } from '../styled/CommentStyles'
-import RatingStars from './RatingStars'
 
 function Comment({ author, text, rating }) {
   return (

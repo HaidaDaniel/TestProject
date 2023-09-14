@@ -1,15 +1,26 @@
 /** @format */
-// import { detailedProductShape } from '../../PropTypes/DetailedProductShape/DetailedProductShape'
+import { useEffect } from 'react'
 import { Container } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
 
-import Header from '../Header'
-import ProductPageBody from '../ProductPageBody'
+import { Header, ProductPageBody } from '../index'
+import { fetchProductRequest } from '../../redux/product'
 
-function ProductPage({ data }) {
+function ProductPage() {
+  const dispatch = useDispatch()
+  const { productId } = useParams()
+
+  useEffect(() => {
+    dispatch(fetchProductRequest(productId))
+  }, [dispatch, productId])
+
+  const product = useSelector((state) => state.product.product)
+
   return (
     <Container>
       <Header></Header>
-      {<ProductPageBody data={data}></ProductPageBody>}
+      {product && <ProductPageBody product={product}></ProductPageBody>}
     </Container>
   )
 }

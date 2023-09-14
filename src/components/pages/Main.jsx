@@ -1,28 +1,19 @@
 /** @format */
 
 import React from 'react'
-import { useSelector } from 'react-redux'
-import PropTypes from 'prop-types'
 import { Container } from 'react-bootstrap'
 
-import Header from '../Header'
-import ProductsGrid from '../ProductsGrid'
+import { Header, ProductsGrid } from '../index'
 
-function Main({ onProductClick }) {
-  const dataR = useSelector((state) => state.products.products)
-
-  console.log(dataR)
-
+function Main() {
   return (
     <Container>
       <Header />
-      <ProductsGrid onProductClick={onProductClick} />
+      <ProductsGrid />
     </Container>
   )
 }
 
 export default Main
 
-Main.propTypes = {
-  onProductClick: PropTypes.func.isRequired,
-}
+Main.propTypes = {}
