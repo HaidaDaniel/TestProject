@@ -8,7 +8,7 @@ import {
   StyledFormLabel,
   StyledFormControl,
   StyledSubmitButton,
-} from './styled/LoginBodyStyles'
+} from '../styled/LoginBodyStyles'
 
 function LoginBody() {
   return (

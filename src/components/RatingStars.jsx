@@ -8,7 +8,7 @@ import {
   HalfFilled,
   InputRating,
   MainSpan,
-} from './styled/RatingStarsStyles'
+} from '../styled/RatingStarsStyles'
 
 function RatingStars({ rating, isInput, onRatingChange }) {
   const [ratingInput, setRatingInput] = useState('')

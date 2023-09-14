@@ -9,7 +9,7 @@ import {
   StyledFormLabel,
   StyledFormControl,
   StyledSubmitButton,
-} from './styled/RegistrationBodyStyles'
+} from '../styled/RegistrationBodyStyles'
 
 function RegistrationBody() {
   return (

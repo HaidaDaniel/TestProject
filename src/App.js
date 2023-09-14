@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { fetchProductById } from './api';
-import GlobalStyles from './GlobalStyles';
+import GlobalStyles from './styled/GlobalStyles';
 import { Provider } from 'react-redux';
 import store from './store/store'
 

@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap'
 import CommentInput from './CommentInput'
 import CommentsBlock from './ComentsBlock'
 import RatingStars from './RatingStars'
-import { StyledImgOfProduct } from './styled/ProductPageBodyStyled'
+import { StyledImgOfProduct } from '../styled/ProductPageBodyStyled'
 
 function ProductPageBody({ data }) {
   return (

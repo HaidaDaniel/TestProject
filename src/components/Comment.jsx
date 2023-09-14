@@ -6,7 +6,7 @@ import {
   StyledCardHeader,
   StyledCardText,
   StyledAuthorText,
-} from './styled/CommentStyles'
+} from '../styled/CommentStyles'
 import RatingStars from './RatingStars'
 
 function Comment({ author, text, rating }) {

@@ -13,7 +13,7 @@ import {
   ProductImageBox,
   StyledLink,
   StyledCardTitle,
-} from './styled/ProductItemStyles'
+} from '../styled/ProductItemStyles'
 
 function ProductItem({ product, onProductClick }) {
   return (

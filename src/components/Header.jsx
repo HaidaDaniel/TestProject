@@ -6,7 +6,7 @@ import {
   StyledNavbar,
   StyledNavbarBrand,
   StyledNavbarCollapse,
-} from './styled/HeaderStyles'
+} from '../styled/HeaderStyles'
 
 function Header() {
   return (

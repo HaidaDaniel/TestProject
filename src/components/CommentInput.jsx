@@ -7,7 +7,7 @@ import {
   StyledFormGroup,
   StyledFormLabel,
   StyledTextArea,
-} from './styled/CommentInputStyles'
+} from '../styled/CommentInputStyles'
 
 function CommentInput({ productId }) {
   const [rating, setRating] = useState(null)
