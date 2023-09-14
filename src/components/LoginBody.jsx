@@ -16,11 +16,11 @@ function LoginBody() {
       <StyledForm className='pt-3'>
         <StyledCol xs={12} md={6}>
           <StyledHeading>Login</StyledHeading>
-          <StyledFormGroup controlId='formGroupEmail'>
+          <StyledFormGroup>
             <StyledFormLabel>Email address</StyledFormLabel>
             <StyledFormControl type='email' placeholder='Email address' />
           </StyledFormGroup>
-          <StyledFormGroup controlId='formGroupPassword'>
+          <StyledFormGroup>
             <StyledFormLabel>Password</StyledFormLabel>
             <StyledFormControl type='password' placeholder='Password' />
           </StyledFormGroup>
