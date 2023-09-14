@@ -9,7 +9,7 @@ function ProductPage({ data }) {
   return (
     <Container>
       <Header></Header>
-      {data && <ProductPageBody data={data}></ProductPageBody>}
+      {<ProductPageBody data={data}></ProductPageBody>}
     </Container>
   )
 }

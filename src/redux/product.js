@@ -38,8 +38,8 @@ export default function productReducer(state = initialState, action) {
 }
 
 // Action creators
-export function fetchProductRequest() {
-    return { type: FETCH_PRODUCT_REQUEST };
+export function fetchProductRequest(id) {
+    return { type: FETCH_PRODUCT_REQUEST, id };
 }
 
 export function fetchProductSuccess(data) {

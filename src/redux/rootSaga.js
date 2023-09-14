@@ -20,7 +20,8 @@ export function* productsRootSaga() {
 
 function* fetchProductSaga(action) {
     try {
-        const data = yield call(fetchProductById, action.id);
+        const { id } = action;
+        const data = yield call(fetchProductById, id);
         yield put(fetchProductSuccess(data));
     } catch (error) {
         yield put(fetchProductFailure(error));

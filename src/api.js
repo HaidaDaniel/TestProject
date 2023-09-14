@@ -19,6 +19,7 @@ export const fetchProducts = async () => {
 
 export const fetchProductById = async (id) => {
     try {
+        console.log(PRODUCTS_URL_BY_ID + id)
         const response = await fetch(PRODUCTS_URL_BY_ID + id);
         if (!response.ok) {
             throw new Error('Response is not OK');
