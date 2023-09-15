@@ -2,7 +2,9 @@
 import { Row } from 'react-bootstrap'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import { useDispatch, useSelector } from 'react-redux'
 
+import { loginRequest } from '../redux/auth'
 import {
   StyledFormContainer,
   StyledCol,
@@ -21,6 +23,13 @@ const validationSchema = Yup.object().shape({
 })
 
 function LoginBody() {
+  const dispatch = useDispatch()
+
+  const handleSubmitForm = (values) => {
+    dispatch(loginRequest(values))
+    console.log(values)
+  }
+
   return (
     <Row>
       <StyledFormContainer>
@@ -32,9 +41,7 @@ function LoginBody() {
               password: '',
             }}
             validationSchema={validationSchema}
-            onSubmit={(values) => {
-              console.log(values)
-            }}>
+            onSubmit={handleSubmitForm}>
             <Form>
               <StyledFormGroup>
                 <StyledFormLabel>Email address</StyledFormLabel>
