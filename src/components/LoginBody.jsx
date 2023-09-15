@@ -1,8 +1,10 @@
 /** @format */
 import { Row } from 'react-bootstrap'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
 
 import {
-  StyledForm,
+  StyledFormContainer,
   StyledCol,
   StyledHeading,
   StyledFormGroup,
@@ -11,25 +13,56 @@ import {
   StyledSubmitButton,
 } from '../styled/LoginBodyStyles'
 
+const validationSchema = Yup.object().shape({
+  email: Yup.string()
+    .email('Please enter a valid email address')
+    .required('This field is required'),
+  password: Yup.string().required('This field is required'),
+})
+
 function LoginBody() {
   return (
     <Row>
-      <StyledForm className='pt-3'>
+      <StyledFormContainer>
         <StyledCol xs={12} md={6}>
           <StyledHeading>Login</StyledHeading>
-          <StyledFormGroup>
-            <StyledFormLabel>Email address</StyledFormLabel>
-            <StyledFormControl type='email' placeholder='Email address' />
-          </StyledFormGroup>
-          <StyledFormGroup>
-            <StyledFormLabel>Password</StyledFormLabel>
-            <StyledFormControl type='password' placeholder='Password' />
-          </StyledFormGroup>
-          <StyledSubmitButton variant='primary' type='submit'>
-            Login
-          </StyledSubmitButton>
+          <Formik
+            initialValues={{
+              email: '',
+              password: '',
+            }}
+            validationSchema={validationSchema}
+            onSubmit={(values) => {
+              console.log(values)
+            }}>
+            <Form>
+              <StyledFormGroup>
+                <StyledFormLabel>Email address</StyledFormLabel>
+                <Field
+                  name='email'
+                  as={StyledFormControl}
+                  type='email'
+                  placeholder='Email address'
+                />
+                <ErrorMessage name='email' component='div' />
+              </StyledFormGroup>
+              <StyledFormGroup>
+                <StyledFormLabel>Password</StyledFormLabel>
+                <Field
+                  name='password'
+                  as={StyledFormControl}
+                  type='password'
+                  placeholder='Password'
+                />
+                <ErrorMessage name='password' component='div' />
+              </StyledFormGroup>
+              <StyledSubmitButton variant='primary' type='submit'>
+                Login
+              </StyledSubmitButton>
+            </Form>
+          </Formik>
         </StyledCol>
-      </StyledForm>
+      </StyledFormContainer>
     </Row>
   )
 }

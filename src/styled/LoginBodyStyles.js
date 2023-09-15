@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import {
 
-    Button,
-    Col,
-    Form,
+  Button,
+  Col,
+  Form,
 } from 'react-bootstrap';
 
-export const StyledForm = styled.form`
+export const StyledFormContainer = styled.div`
   padding-top: 3rem;
 `;
 
