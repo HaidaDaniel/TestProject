@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const RatingStarsContainer = styled.div`
   display: inline-block;
   margin-left: 0;
+  padding-bottom:5px;
 `;
 
 export const Star = styled.span`

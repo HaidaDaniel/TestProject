@@ -11,9 +11,9 @@ function ProductPageBody({ product }) {
   const data = product
 
   return (
-    <div>
+    <>
       {data && (
-        <Row>
+        <Row className='mt-3'>
           <Col md='6' xs='12' className=''>
             <StyledImgOfProduct
               src={data.image}
@@ -30,7 +30,7 @@ function ProductPageBody({ product }) {
                 <RatingStars rating={data.rating.rate} isInput={false} />
               </Col>
               <Col xs='auto' className='ml-auto my-auto'>
-                <p>Price:{' ' + data.price + ' '}usd</p>
+                Price:{' ' + data.price + ' '}usd
               </Col>
             </Row>
             <Row>
@@ -46,7 +46,7 @@ function ProductPageBody({ product }) {
           </Col>
         </Row>
       )}
-    </div>
+    </>
   )
 }
 export default ProductPageBody
