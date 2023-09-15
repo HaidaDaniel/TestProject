@@ -48,7 +48,7 @@ const fakeLoginAPI = (credentials) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (credentials.email === 'demo@demo.com' && credentials.password === 'password') {
-                resolve({ email: 'demo@demo.com' });
+                resolve('demo@demo.com');
             } else {
                 reject({ message: 'Invalid credentials' });
             }
@@ -65,12 +65,23 @@ function* loginSaga(action) {
     }
 }
 
+
+
+export function* authRootSaga() {
+    yield takeLatest(LOGIN_REQUEST, loginSaga);
+
+}
+
+
 function* logoutSaga() {
 
     yield put(logout());
 }
 
-export function* authRootSaga() {
-    yield takeLatest(LOGIN_REQUEST, loginSaga);
+export function* deAuthRootSaga() {
     yield takeLatest(LOGOUT, logoutSaga);
 }
+
+
+
+export const rootSagas = [productsRootSaga, productRootSaga, authRootSaga, deAuthRootSaga];
