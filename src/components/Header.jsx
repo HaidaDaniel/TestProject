@@ -40,11 +40,11 @@ function Header() {
           )}
           {!auth.isLoading && auth.user !== null && (
             <>
-              <Nav.Item>
+              {/* <Nav.Item>
                 <Nav.Link as={Link} to='#' onClick={handleLogout}>
                   Logout
                 </Nav.Link>
-              </Nav.Item>
+              </Nav.Item> */}
             </>
           )}
         </Nav>
