@@ -1,13 +1,16 @@
 /** @format */
 import { detailedProductShape } from './PropTypes/DetailedProductShape'
 import { Row, Col } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
 
 import CommentInput from './CommentInput'
-import CommentsBlock from './ComentsBlock'
+import CommentsBlock from './CommentsBlock'
 import RatingStars from './RatingStars'
 import { StyledImgOfProduct } from '../styled/ProductPageBodyStyled'
 
 function ProductPageBody({ product }) {
+  const user = useSelector((state) => state.auth.user)
+
   const data = product
 
   return (
@@ -41,7 +44,11 @@ function ProductPageBody({ product }) {
               {data.comments && <CommentsBlock comments={data.comments} />}
             </Row>
             <Row className='border-top pt-3 mb-3'>
-              <CommentInput productId={data.id} />
+              {user !== null ? (
+                <CommentInput productId={data.id} />
+              ) : (
+                <div>login please to make review</div>
+              )}
             </Row>
           </Col>
         </Row>

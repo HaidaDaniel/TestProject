@@ -3,6 +3,7 @@ import { Row } from 'react-bootstrap'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 import { loginRequest } from '../redux/auth'
 import {
@@ -24,9 +25,13 @@ const validationSchema = Yup.object().shape({
 
 function LoginBody() {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const handleSubmitForm = (values) => {
     dispatch(loginRequest(values))
+    setTimeout(() => {
+      navigate(-1)
+    }, 500)
   }
 
   return (

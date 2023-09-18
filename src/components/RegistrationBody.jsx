@@ -17,7 +17,7 @@ import {
 
 function RegistrationBody() {
   const [isSuccess, setIsSuccess] = useState(false)
-  let navigate = useNavigate()
+  const navigate = useNavigate()
 
   const validationSchema = Yup.object().shape({
     email: Yup.string()
@@ -47,7 +47,7 @@ function RegistrationBody() {
   const handleCloseModal = () => {
     setIsSuccess(false)
     setTimeout(() => {
-      navigate('/')
+      navigate('/login')
     }, 500)
   }
 
