@@ -1,8 +1,9 @@
 /** @format */
-
-import { Row } from 'react-bootstrap'
+import { useState } from 'react'
+import { Row, Modal, Button } from 'react-bootstrap'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import { useNavigate } from 'react-router-dom'
 
 import {
   StyledCol,
@@ -15,6 +16,9 @@ import {
 } from '../styled/RegistrationBodyStyles'
 
 function RegistrationBody() {
+  const [isSuccess, setIsSuccess] = useState(false)
+  let navigate = useNavigate()
+
   const validationSchema = Yup.object().shape({
     email: Yup.string()
       .email('Please enter a valid email address')
@@ -28,6 +32,24 @@ function RegistrationBody() {
       .oneOf([Yup.ref('password'), null], 'Passwords must match')
       .required('This field is required'),
   })
+
+  const handleSubmit = async (values, { resetForm }) => {
+    try {
+      setTimeout(() => {
+        console.log(values)
+        setIsSuccess(true)
+        resetForm()
+      }, 500)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+  const handleCloseModal = () => {
+    setIsSuccess(false)
+    setTimeout(() => {
+      navigate('/')
+    }, 500)
+  }
 
   return (
     <Row>
@@ -43,63 +65,77 @@ function RegistrationBody() {
               confirmPassword: '',
             }}
             validationSchema={validationSchema}
-            onSubmit={(values) => {
-              console.log(values)
-            }}>
-            <Form>
-              <StyledFormGroup>
-                <StyledFormLabel>Email address</StyledFormLabel>
-                <Field
-                  name='email'
-                  as={StyledFormControl}
-                  type='email'
-                  placeholder='Email address'
-                />
-                <ErrorMessage name='email' component='div' />
-              </StyledFormGroup>
-              <StyledFormGroup>
-                <StyledFormLabel>First name</StyledFormLabel>
-                <Field
-                  name='firstName'
-                  as={StyledFormControl}
-                  placeholder='First name'
-                />
-                <ErrorMessage name='firstName' component='div' />
-              </StyledFormGroup>
-              <StyledFormGroup>
-                <StyledFormLabel>Last name</StyledFormLabel>
-                <Field
-                  name='lastName'
-                  as={StyledFormControl}
-                  placeholder='Last name'
-                />
-                <ErrorMessage name='lastName' component='div' />
-              </StyledFormGroup>
-              <StyledFormGroup>
-                <StyledFormLabel>Password</StyledFormLabel>
-                <Field
-                  name='password'
-                  as={StyledFormControl}
-                  type='password'
-                  placeholder='Password'
-                />
-                <ErrorMessage name='password' component='div' />
-              </StyledFormGroup>
-              <StyledFormGroup>
-                <StyledFormLabel>Confirm Password:</StyledFormLabel>
-                <Field
-                  name='confirmPassword'
-                  as={StyledFormControl}
-                  type='password'
-                  placeholder='Confirm Password'
-                />
-                <ErrorMessage name='confirmPassword' component='div' />
-              </StyledFormGroup>
-              <StyledSubmitButton variant='primary' type='submit'>
-                Registration
-              </StyledSubmitButton>
-            </Form>
+            onSubmit={handleSubmit}>
+            {({ isValid }) => (
+              <Form>
+                <StyledFormGroup>
+                  <StyledFormLabel>Email address</StyledFormLabel>
+                  <Field
+                    name='email'
+                    as={StyledFormControl}
+                    type='email'
+                    placeholder='Email address'
+                  />
+                  <ErrorMessage name='email' component='div' />
+                </StyledFormGroup>
+                <StyledFormGroup>
+                  <StyledFormLabel>First name</StyledFormLabel>
+                  <Field
+                    name='firstName'
+                    as={StyledFormControl}
+                    placeholder='First name'
+                  />
+                  <ErrorMessage name='firstName' component='div' />
+                </StyledFormGroup>
+                <StyledFormGroup>
+                  <StyledFormLabel>Last name</StyledFormLabel>
+                  <Field
+                    name='lastName'
+                    as={StyledFormControl}
+                    placeholder='Last name'
+                  />
+                  <ErrorMessage name='lastName' component='div' />
+                </StyledFormGroup>
+                <StyledFormGroup>
+                  <StyledFormLabel>Password</StyledFormLabel>
+                  <Field
+                    name='password'
+                    as={StyledFormControl}
+                    type='password'
+                    placeholder='Password'
+                  />
+                  <ErrorMessage name='password' component='div' />
+                </StyledFormGroup>
+                <StyledFormGroup>
+                  <StyledFormLabel>Confirm Password:</StyledFormLabel>
+                  <Field
+                    name='confirmPassword'
+                    as={StyledFormControl}
+                    type='password'
+                    placeholder='Confirm Password'
+                  />
+                  <ErrorMessage name='confirmPassword' component='div' />
+                </StyledFormGroup>
+                <StyledSubmitButton
+                  variant='primary'
+                  type='submit'
+                  disabled={!isValid}>
+                  Registration
+                </StyledSubmitButton>
+              </Form>
+            )}
           </Formik>
+          <Modal show={isSuccess} onHide={handleCloseModal}>
+            <Modal.Header closeButton>
+              <Modal.Title>Success</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Your registration was successful.</Modal.Body>
+            <Modal.Footer>
+              <Button variant='primary' onClick={handleCloseModal}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </StyledCol>
       </StyledFormContainer>
     </Row>
@@ -107,3 +143,5 @@ function RegistrationBody() {
 }
 
 export default RegistrationBody
+
+RegistrationBody.propTypes = {}

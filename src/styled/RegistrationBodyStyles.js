@@ -7,7 +7,7 @@ export const StyledFormContainer = styled.div`
 
 export const StyledCol = styled(Col)`
   margin: 0 auto;
-  border: 1px solid #ccc;
+  border: 1px solid ${(props) => props.theme.colors.normal};
   border-radius: 8px;
   padding: 1rem;
 `;

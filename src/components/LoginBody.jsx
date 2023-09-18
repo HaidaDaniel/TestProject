@@ -2,7 +2,7 @@
 import { Row } from 'react-bootstrap'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import { loginRequest } from '../redux/auth'
 import {
@@ -27,7 +27,6 @@ function LoginBody() {
 
   const handleSubmitForm = (values) => {
     dispatch(loginRequest(values))
-    console.log(values)
   }
 
   return (
@@ -75,3 +74,5 @@ function LoginBody() {
 }
 
 export default LoginBody
+
+LoginBody.propTypes = {}

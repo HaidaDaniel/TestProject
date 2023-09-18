@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Stack } from 'react-bootstrap'
 
 import { Comment } from './index'
+import { commentShape } from './PropTypes/DetailedProductShape'
 import { StyledCommentsBlock } from '../styled/CommentsBlockStyles'
 
 function CommentsBlock({ comments }) {
@@ -29,5 +30,5 @@ function CommentsBlock({ comments }) {
 export default CommentsBlock
 
 CommentsBlock.propTypes = {
-  comments: PropTypes.array.isRequired,
+  comments: PropTypes.arrayOf(PropTypes.shape(commentShape)).isRequired,
 }

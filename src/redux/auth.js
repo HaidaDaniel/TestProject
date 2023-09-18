@@ -1,17 +1,17 @@
-// actions
+// Actions
 export const LOGIN_REQUEST = 'auth/LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'auth/LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'auth/LOGIN_FAILURE';
 export const LOGOUT = 'auth/LOGOUT';
 
-// initial state
+// Reducer
 const initialState = {
     user: null,
     isLoading: false,
     error: null,
 };
 
-// reducer
+
 export default function authReducer(state = initialState, action) {
     switch (action.type) {
         case LOGIN_REQUEST:
@@ -42,7 +42,7 @@ export default function authReducer(state = initialState, action) {
     }
 }
 
-// action creators
+// Action creators
 export const loginRequest = (credentials) => ({
     type: LOGIN_REQUEST,
     payload: credentials,

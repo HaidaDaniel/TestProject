@@ -3,8 +3,8 @@ export const StyledDivOfProduct = styled.div`
 margin-top:2rem`
 
 export const StyledImgOfProduct = styled.img`
-border-right: 1px solid grey;
-border-bottom: 1px solid grey;
+border-right: 1px solid ${(props) => props.theme.colors.normal};
+border-bottom: 1px solid ${(props) => props.theme.colors.normal};
 padding-right: 2rem;
 padding-bottom: 2rem;
 margin-bottom: 2rem;

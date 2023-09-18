@@ -40,7 +40,7 @@ export const ProductImageBox = styled.div`
 export const ProductName = styled.p`
 margin: 0;
   text-decoration: none;
-  color: #212529;
+  color: ${(props) => props.theme.colors.normal};
 `;
 
 export const StyledCardTitle = styled(Card.Title)`
@@ -52,7 +52,7 @@ export const StyledCardTitle = styled(Card.Title)`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #212529;
+  color: ${(props) => props.theme.colors.normal};
 
   &:hover {
     text-decoration: underline;
