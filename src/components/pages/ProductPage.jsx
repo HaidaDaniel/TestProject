@@ -1,7 +1,7 @@
 /** @format */
 // import { detailedProductShape } from '../../PropTypes/DetailedProductShape/DetailedProductShape'
-import Header from '../../Header/Header'
-import ProductPageBody from '../../ProductPageBody/ProductPageBody'
+import Header from '../Header'
+import ProductPageBody from '../ProductPageBody'
 import { Container } from 'react-bootstrap'
 
 function ProductPage({ data }) {

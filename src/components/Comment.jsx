@@ -1,14 +1,14 @@
 /** @format */
+import PropTypes from 'prop-types'
 import { Card } from 'react-bootstrap'
-import RatingStars from '../RatingStars/RatingStars'
-import './index.css'
+import RatingStars from './RatingStars'
 
 function Comment({ author, text, rating }) {
   return (
     <Card style={{ width: '100%' }}>
       <Card.Body>
         <Card.Header className='d-flex'>
-          <RatingStars rating={rating} />
+          <RatingStars rating={rating} isInput={false} />
         </Card.Header>
         <Card.Subtitle className='mb-2 text-muted'></Card.Subtitle>
 
@@ -24,3 +24,9 @@ function Comment({ author, text, rating }) {
 }
 
 export default Comment
+
+Comment.propTypes = {
+  author: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+}

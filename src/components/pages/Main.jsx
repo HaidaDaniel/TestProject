@@ -2,10 +2,10 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { productsDataPropTypes } from '../../PropTypes/ProductShape/ProductShape'
-import Header from '../../Header/Header'
+import { productsDataPropTypes } from '../PropTypes/ProductShape'
+import Header from '../Header'
 import { Container } from 'react-bootstrap'
-import ProductsGrid from '../../ProductsGrid/ProductsGrid'
+import ProductsGrid from '../ProductsGrid'
 
 function Main({ productsData, onProductClick }) {
   return (

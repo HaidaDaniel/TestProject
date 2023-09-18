@@ -1,25 +1,21 @@
 /** @format */
-import { detailedProductShape } from '../PropTypes/DetailedProductShape/DetailedProductShape'
+import { detailedProductShape } from './PropTypes/DetailedProductShape'
 import { Row, Col } from 'react-bootstrap'
-import CommentInput from '../CommentInput/CommentInput'
-import CommentsBlock from '../CommentsBlock/ComentsBlock'
-import RatingStars from '../RatingStars/RatingStars'
-import './index.css'
+import CommentInput from './CommentInput'
+import CommentsBlock from './ComentsBlock'
+import RatingStars from './RatingStars'
+import { StyledImgOfProduct } from './styled/ProductPageBodyStyled'
 
 function ProductPageBody({ data }) {
   return (
     <>
       <Row className='mt-6'>
         <Col md='6' xs='12' className=''>
-          {
-            <img
-              variant='top'
-              src={data.image}
-              alt={data.title}
-              className='col-left'
-              style={{ maxWidth: '100%', height: 'auto' }}
-            />
-          }
+          <StyledImgOfProduct
+            src={data.image}
+            alt={data.title}
+            className='col-left'
+            style={{ maxWidth: '100%', height: 'auto' }}></StyledImgOfProduct>
         </Col>
         <Col md='6' xs='12' className='col-right mt-3'>
           <Row className='mb-3'>
@@ -41,7 +37,7 @@ function ProductPageBody({ data }) {
             {data.comments && <CommentsBlock comments={data.comments} />}
           </Row>
           <Row className='border-top pt-3 mb-3'>
-            <CommentInput />
+            <CommentInput productId={data.id} />
           </Row>
         </Col>
       </Row>

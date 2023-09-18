@@ -1,7 +1,7 @@
 /** @format */
-import Header from '../../Header/Header'
+import Header from '../Header'
 import { Container } from 'react-bootstrap'
-import LoginBody from '../../LoginBody/LoginBody'
+import LoginBody from '../LoginBody'
 
 function Login() {
   return (
