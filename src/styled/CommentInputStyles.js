@@ -17,5 +17,6 @@ export const StyledTextArea = styled.div`
   padding: 1rem;
   padding-top: 0;
 `
+
     ;
 
