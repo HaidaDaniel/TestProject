@@ -1,5 +1,6 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 import { fetchProductById } from '../../api';
+
 // Actions
 export const FETCH_PRODUCT_REQUEST = 'FETCH_PRODUCT_REQUEST';
 export const FETCH_PRODUCT_SUCCESS = 'FETCH_PRODUCT_SUCCESS';
@@ -52,8 +53,7 @@ export function fetchProductFailure(error) {
     return { type: FETCH_PRODUCT_FAILURE, payload: error };
 }
 
-///sagas 
-
+//Sagas 
 function* fetchProductSaga(action) {
     try {
         const { id } = action;

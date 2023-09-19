@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 
-
 import {
   StyledNavbar,
   StyledNavbarBrand,
