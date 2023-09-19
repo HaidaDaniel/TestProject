@@ -24,7 +24,6 @@ export const HalfFilled = styled.span`
   left: 0;
   width: 100%;
   overflow: hidden;
-  color:${props => props.theme.colors.golden};
 `;
 
 export const InputRating = styled.input`

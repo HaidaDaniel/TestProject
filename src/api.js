@@ -1,6 +1,7 @@
 
 const PRODUCTS_URL = process.env.REACT_APP_PRODUCTS_URL
 const PRODUCTS_URL_BY_ID = process.env.REACT_APP_PRODUCT_BY_ID_URL
+const PRODUCTS_POST_URL_BY_ID = process.env.REACT_APP_PRODUCT_POST_BY_ID_URL
 
 
 export const fetchProducts = async () => {
@@ -15,7 +16,8 @@ export const fetchProducts = async () => {
         console.error('Error in fetchProducts:', error);
         throw error;
     }
-};
+}
+    ;
 
 export const fetchProductById = async (id) => {
     try {
@@ -30,4 +32,30 @@ export const fetchProductById = async (id) => {
         console.error('Error in fetchProductById:', error);
         throw error;
     }
-};
+}
+    ;
+
+export async function postReview(data) {
+    try {
+        const response = await fetch(
+            PRODUCTS_POST_URL_BY_ID + data.productId,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            }
+        );
+
+        if (response.ok) {
+            return 'Review sent successfully';
+        } else {
+            return 'Error sending review';
+        }
+    } catch (error) {
+        console.error('Error sending review:', error);
+        return 'Error sending review';
+    }
+}
+;

@@ -13,4 +13,4 @@ margin-bottom: 2rem;
   border-right: none !important;
   padding-right: 0;
 }
-`
+`;

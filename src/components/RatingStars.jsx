@@ -11,7 +11,7 @@ import {
   MainSpan,
 } from '../styled/RatingStarsStyles'
 
-function RatingStars({ rating, isInput, onRatingChange }) {
+const RatingStars = ({ rating, isInput, onRatingChange }) => {
   const [ratingInput, setRatingInput] = useState('')
 
   const handleInputBlur = () => {

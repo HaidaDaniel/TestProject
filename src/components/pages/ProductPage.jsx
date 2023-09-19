@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
 import { Header, ProductPageBody } from '../index'
-import { fetchProductRequest } from '../../redux/product'
+import { fetchProductRequest } from '../../redux/ducks/product'
 
 function ProductPage() {
   const dispatch = useDispatch()
@@ -13,7 +13,7 @@ function ProductPage() {
 
   useEffect(() => {
     dispatch(fetchProductRequest(productId))
-  }, [dispatch, productId])
+  }, [productId])
 
   const product = useSelector((state) => state.product.product)
 
@@ -25,7 +25,4 @@ function ProductPage() {
   )
 }
 export default ProductPage
-
-// ProductPage.propTypes = {
-//   data: detailedProductShape.isRequired,
-// }
+  ;

@@ -37,5 +37,4 @@ export const StyledNav = styled(Nav)`
       color: ${(props) => props.theme.colors.secondary};
     }
   }
-
-`
+`;

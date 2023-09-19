@@ -1,9 +1,8 @@
 /** @format */
 import { Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
-import { logout } from '../redux/auth'
 import {
   StyledNavbar,
   StyledNavbarBrand,
@@ -11,12 +10,7 @@ import {
 } from '../styled/HeaderStyles'
 
 function Header() {
-  let auth = useSelector((state) => state.auth)
-  const dispatch = useDispatch()
-  console.log(auth)
-  const handleLogout = () => {
-    dispatch(logout())
-  }
+  const auth = useSelector((state) => state.auth)
 
   return (
     <StyledNavbar expand='lg'>
@@ -39,13 +33,7 @@ function Header() {
             </>
           )}
           {!auth.isLoading && auth.user !== null && (
-            <>
-              {/* <Nav.Item>
-                <Nav.Link as={Link} to='#' onClick={handleLogout}>
-                  Logout
-                </Nav.Link>
-              </Nav.Item> */}
-            </>
+            <> </>
           )}
         </Nav>
       </StyledNavbarCollapse>

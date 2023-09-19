@@ -1,12 +1,12 @@
 /** @format */
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { fetchProductsRequest } from '../redux/products'
+import { fetchProductsRequest } from '../redux/ducks/products'
 
 import { ProductItem } from './index'
 import { StyledRow, StyledCol } from '../styled/ProductsGridStyles'
 
-function ProductsGrid() {
+const ProductsGrid = () => {
   const dispatch = useDispatch()
   const products = useSelector((state) => state.products.products)
 

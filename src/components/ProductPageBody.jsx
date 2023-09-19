@@ -3,14 +3,11 @@ import { detailedProductShape } from './PropTypes/DetailedProductShape'
 import { Row, Col } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 
-import CommentInput from './CommentInput'
-import CommentsBlock from './CommentsBlock'
-import RatingStars from './RatingStars'
+import { CommentInput, CommentsBlock, RatingStars } from './index'
 import { StyledImgOfProduct } from '../styled/ProductPageBodyStyled'
 
-function ProductPageBody({ product }) {
+const ProductPageBody = ({ product }) => {
   const user = useSelector((state) => state.auth.user)
-
   const data = product
 
   return (
