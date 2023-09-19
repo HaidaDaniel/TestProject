@@ -1,3 +1,5 @@
+import { takeLatest, call, put } from 'redux-saga/effects';
+import { fetchProductById } from '../../api';
 // Actions
 export const FETCH_PRODUCT_REQUEST = 'FETCH_PRODUCT_REQUEST';
 export const FETCH_PRODUCT_SUCCESS = 'FETCH_PRODUCT_SUCCESS';
@@ -49,3 +51,22 @@ export function fetchProductSuccess(data) {
 export function fetchProductFailure(error) {
     return { type: FETCH_PRODUCT_FAILURE, payload: error };
 }
+
+///sagas 
+
+function* fetchProductSaga(action) {
+    try {
+        const { id } = action;
+        const data = yield call(fetchProductById, id);
+        yield localStorage.setItem('product', JSON.stringify(data));
+        yield put(fetchProductSuccess(data));
+    } catch (error) {
+        yield put(fetchProductFailure(error));
+    }
+}
+
+export function* productRootSaga() {
+    yield takeLatest(FETCH_PRODUCT_REQUEST, fetchProductSaga);
+
+}
+;

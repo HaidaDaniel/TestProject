@@ -1,3 +1,5 @@
+import { takeLatest, call, put } from 'redux-saga/effects';
+
 // Actions
 export const LOGIN_REQUEST = 'auth/LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'auth/LOGIN_SUCCESS';
@@ -10,7 +12,6 @@ const initialState = {
     isLoading: false,
     error: null,
 };
-
 
 export default function authReducer(state = initialState, action) {
     switch (action.type) {
@@ -61,3 +62,44 @@ export const loginFailure = (error) => ({
 export const logout = () => ({
     type: LOGOUT,
 });
+
+
+//// Saga 
+
+const fakeLoginAPI = (credentials) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (credentials.email === 'demo@demo.com' && credentials.password === 'password') {
+                resolve('demo@demo.com');
+            } else {
+                reject({ message: 'Invalid credentials' });
+            }
+        }, 500);
+    });
+};
+
+function* loginSaga(action) {
+    try {
+        const user = yield call(fakeLoginAPI, action.payload);
+        yield put(loginSuccess(user));
+    } catch (error) {
+        yield put(loginFailure(error.message));
+    }
+}
+
+export function* authRootSaga() {
+    yield takeLatest(LOGIN_REQUEST, loginSaga);
+
+}
+
+function* logoutSaga() {
+
+    yield put(logout());
+}
+
+export function* deAuthRootSaga() {
+    yield takeLatest(LOGOUT, logoutSaga);
+}
+
+export const authSagas = [authRootSaga, deAuthRootSaga]
+    ;

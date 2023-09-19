@@ -7,4 +7,5 @@ export const StyledRow = styled(Row)`
 
 export const StyledCol = styled(Col)`
   margin: 0.5rem 0;
-`;
+`
+  ;

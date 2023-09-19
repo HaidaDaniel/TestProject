@@ -10,6 +10,7 @@ import {
   StyledFormLabel,
   StyledTextArea,
 } from '../styled/CommentInputStyles'
+import { postReview } from '../api'
 
 function CommentInput({ productId }) {
   const [rating, setRating] = useState(null)
@@ -18,40 +19,21 @@ function CommentInput({ productId }) {
   const [modalMessage, setModalMessage] = useState('')
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     const data = {
       productId,
       rating,
       text,
-    }
+    };
 
-    try {
-      const response = await fetch(
-        'http://demo5127360.mockable.io/POST/product/1',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        }
-      )
+    const resultMessage = await postReview(data);
 
-      if (response.ok) {
-        setModalMessage('Review sent successfully')
-        setShowModal(true)
-      } else {
-        setModalMessage('Error sending review')
-        setShowModal(true)
-      }
-
-      setRating(null)
-      setText('')
-    } catch (error) {
-      console.error('Error sending review:', error)
-    }
-  }
+    setModalMessage(resultMessage);
+    setShowModal(true);
+    setRating(null);
+    setText('');
+  };
 
   const closeModal = () => {
     setShowModal(false)
@@ -89,6 +71,7 @@ function CommentInput({ productId }) {
     </>
   )
 }
+
 export default CommentInput
 
 CommentInput.propTypes = {

@@ -1,15 +1,15 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 
 import { fetchProducts, fetchProductById } from '../api';
-import { FETCH_PRODUCTS_REQUEST, fetchProductsSuccess, fetchProductsFailure } from './products';
-import { FETCH_PRODUCT_REQUEST, fetchProductSuccess, fetchProductFailure } from './product';
+import { FETCH_PRODUCTS_REQUEST, fetchProductsSuccess, fetchProductsFailure } from './ducks/products';
+import { FETCH_PRODUCT_REQUEST, fetchProductSuccess, fetchProductFailure } from './ducks/product';
 import {
     LOGIN_REQUEST,
     loginSuccess,
     loginFailure,
     logout,
     LOGOUT
-} from './auth';
+} from './ducks/auth';
 
 function* fetchProductsSaga() {
     try {
@@ -44,44 +44,3 @@ export function* productRootSaga() {
 
 // Simulated login API call
 
-const fakeLoginAPI = (credentials) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (credentials.email === 'demo@demo.com' && credentials.password === 'password') {
-                resolve('demo@demo.com');
-            } else {
-                reject({ message: 'Invalid credentials' });
-            }
-        }, 500);
-    });
-};
-
-function* loginSaga(action) {
-    try {
-        const user = yield call(fakeLoginAPI, action.payload);
-        yield put(loginSuccess(user));
-    } catch (error) {
-        yield put(loginFailure(error.message));
-    }
-}
-
-
-
-export function* authRootSaga() {
-    yield takeLatest(LOGIN_REQUEST, loginSaga);
-
-}
-
-
-function* logoutSaga() {
-
-    yield put(logout());
-}
-
-export function* deAuthRootSaga() {
-    yield takeLatest(LOGOUT, logoutSaga);
-}
-
-
-
-export const rootSagas = [productsRootSaga, productRootSaga, authRootSaga, deAuthRootSaga];

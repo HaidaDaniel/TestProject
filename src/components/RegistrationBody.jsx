@@ -15,7 +15,7 @@ import {
   StyledSubmitButton,
 } from '../styled/RegistrationBodyStyles'
 
-function RegistrationBody() {
+const RegistrationBody = () => {
   const [isSuccess, setIsSuccess] = useState(false)
   const navigate = useNavigate()
 

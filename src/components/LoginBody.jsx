@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
-import { loginRequest } from '../redux/auth'
+import { loginRequest } from '../redux/ducks/auth'
 import {
   StyledFormContainer,
   StyledCol,
@@ -16,14 +16,14 @@ import {
   StyledSubmitButton,
 } from '../styled/LoginBodyStyles'
 
-const validationSchema = Yup.object().shape({
+const validationSchema = () => Yup.object().shape({
   email: Yup.string()
     .email('Please enter a valid email address')
     .required('This field is required'),
   password: Yup.string().required('This field is required'),
 })
 
-function LoginBody() {
+const LoginBody = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 

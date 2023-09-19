@@ -11,19 +11,17 @@ import {
   StyledAuthorText,
 } from '../styled/CommentStyles'
 
-function Comment({ author, text, rating }) {
-  return (
-    <StyledCard>
-      <StyledCardHeader>
-        <RatingStars rating={rating} isInput={false} />
-      </StyledCardHeader>
-      <StyledCardBody>
-        <StyledCardText>{text}</StyledCardText>
-        <StyledAuthorText>{author}</StyledAuthorText>
-      </StyledCardBody>
-    </StyledCard>
-  )
-}
+const Comment = ({ author, text, rating }) => (
+  <StyledCard>
+    <StyledCardHeader>
+      <RatingStars rating={rating} isInput={false} />
+    </StyledCardHeader>
+    <StyledCardBody>
+      <StyledCardText>{text}</StyledCardText>
+      <StyledAuthorText>{author}</StyledAuthorText>
+    </StyledCardBody>
+  </StyledCard>
+)
 
 export default Comment
 

@@ -1,7 +1,13 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
+
 import rootReducer from './rootReducer';
-import { rootSagas } from './rootSaga';
+import { authRootSaga, deAuthRootSaga } from './ducks/auth';
+import { productRootSaga } from './ducks/product';
+import { productsRootSaga } from './ducks/products';
+
+
+const rootSagas = [authRootSaga, deAuthRootSaga, productsRootSaga, productRootSaga]
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -13,4 +19,5 @@ const store = createStore(
 
 rootSagas.forEach((saga) => sagaMiddleware.run(saga));
 
-export default store;
+export default store
+    ;
