@@ -25,7 +25,4 @@ function ProductPage() {
   )
 }
 export default ProductPage
-
-// ProductPage.propTypes = {
-//   data: detailedProductShape.isRequired,
-// }
+  ;
