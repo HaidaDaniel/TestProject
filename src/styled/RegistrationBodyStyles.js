@@ -30,5 +30,4 @@ export const StyledFormControl = styled(Form.Control)`
 
 export const StyledSubmitButton = styled(Button)`
   margin-bottom: 1rem;
-`
-  ;
+`;

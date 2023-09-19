@@ -57,5 +57,4 @@ export const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
-`
-  ;
+`;

@@ -20,5 +20,4 @@ export const StyledCardText = styled(Card.Text)`
 export const StyledAuthorText = styled(Card.Text)`
   display: flex;
   justify-content: flex-end;
-`
-  ;
+`;
