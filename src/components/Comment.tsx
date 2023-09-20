@@ -12,14 +12,16 @@ import {
 } from '../styled/CommentStyles'
 import { IComment } from './interfaces/IProductData'
 
-const Comment: FC<IComment> = ({ author, text, rating }) => (
+const Comment: FC<IComment> = ({ author, text, rating, commentId }) => (
   <StyledCard>
     <StyledCardHeader>
       <RatingStars rating={rating} isInput={false} />
     </StyledCardHeader>
     <StyledCardBody>
       <StyledCardText>{text}</StyledCardText>
-      <StyledAuthorText>{author}</StyledAuthorText>
+      <StyledAuthorText>
+        author:{author} <br /> review id:{commentId}
+      </StyledAuthorText>
     </StyledCardBody>
   </StyledCard>
 )

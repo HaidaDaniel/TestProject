@@ -37,13 +37,13 @@ export const fetchProductById = async (id: number): Promise<IProduct> => {
   }
 }
 
-interface IData {
+interface ISendData {
   productId: number
   rating: number
   text: string
 }
 
-export async function postReview(data: IData) {
+export async function postReview(data: ISendData) {
   try {
     const response = await fetch(
       (PRODUCTS_POST_URL_BY_ID as string) + data.productId,

@@ -23,6 +23,7 @@ const CommentsBlock: FC<CommentsBlockProps> = ({ comments }) => (
               author={comment.author}
               text={comment.text}
               rating={comment.rating}
+              commentId={comment.commentId}
             />
           ))}
       </Stack>
