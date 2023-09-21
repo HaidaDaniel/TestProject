@@ -12,7 +12,7 @@ exports[`Comment Component renders comment details correctly 1`] = `
         <div
           class="sc-ezGUZh bxdEeg"
         >
-          <span
+          <div
             class="sc-hhWzdI RnQUK"
           >
             <span
@@ -20,8 +20,8 @@ exports[`Comment Component renders comment details correctly 1`] = `
             >
               ★
             </span>
-          </span>
-          <span
+          </div>
+          <div
             class="sc-hhWzdI RnQUK"
           >
             <span
@@ -29,8 +29,8 @@ exports[`Comment Component renders comment details correctly 1`] = `
             >
               ★
             </span>
-          </span>
-          <span
+          </div>
+          <div
             class="sc-hhWzdI RnQUK"
           >
             <span
@@ -38,8 +38,8 @@ exports[`Comment Component renders comment details correctly 1`] = `
             >
               ★
             </span>
-          </span>
-          <span
+          </div>
+          <div
             class="sc-hhWzdI RnQUK"
           >
             <span
@@ -47,8 +47,8 @@ exports[`Comment Component renders comment details correctly 1`] = `
             >
               ★
             </span>
-          </span>
-          <span
+          </div>
+          <div
             class="sc-hhWzdI RnQUK"
           >
             <span
@@ -56,7 +56,7 @@ exports[`Comment Component renders comment details correctly 1`] = `
             >
               ★
             </span>
-          </span>
+          </div>
           5
            
           /5

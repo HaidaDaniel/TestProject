@@ -20,7 +20,7 @@ exports[`CommentInput Component handles form submission 1`] = `
           <div
             class="sc-kMbQoj gbwijL"
           >
-            <span
+            <div
               class="sc-cCIIiH dyAKMf"
             >
               <span
@@ -28,8 +28,8 @@ exports[`CommentInput Component handles form submission 1`] = `
               >
                 ★
               </span>
-            </span>
-            <span
+            </div>
+            <div
               class="sc-cCIIiH dyAKMf"
             >
               <span
@@ -37,8 +37,8 @@ exports[`CommentInput Component handles form submission 1`] = `
               >
                 ★
               </span>
-            </span>
-            <span
+            </div>
+            <div
               class="sc-cCIIiH dyAKMf"
             >
               <span
@@ -46,8 +46,8 @@ exports[`CommentInput Component handles form submission 1`] = `
               >
                 ★
               </span>
-            </span>
-            <span
+            </div>
+            <div
               class="sc-cCIIiH dyAKMf"
             >
               <span
@@ -55,8 +55,8 @@ exports[`CommentInput Component handles form submission 1`] = `
               >
                 ★
               </span>
-            </span>
-            <span
+            </div>
+            <div
               class="sc-cCIIiH dyAKMf"
             >
               <span
@@ -64,7 +64,7 @@ exports[`CommentInput Component handles form submission 1`] = `
               >
                 ★
               </span>
-            </span>
+            </div>
             <input
               class="sc-gXCJSa kQcHUY"
               max="5"

@@ -39,7 +39,6 @@ describe('CommentInput Component', () => {
     });
 
     const modal = await screen.findByText('Review Status', { exact: false });
-    console.log(modal)
     expect(modal).toBeVisible();
 
     expect(document.body).toMatchSnapshot();
