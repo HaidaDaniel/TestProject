@@ -1,6 +1,6 @@
 /** @format */
 import { Container } from 'react-bootstrap'
-import { Header, ProductsGrid } from '../index'
+import { Header, ProductsGrid } from '../'
 
 const Main = () => (
   <Container>

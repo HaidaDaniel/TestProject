@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { useState } from 'react'
 import { Form, Button, Modal } from 'react-bootstrap'
 
-import { RatingStars } from './index'
+import { RatingStars } from './'
 
 import {
   StyledFormGroup,

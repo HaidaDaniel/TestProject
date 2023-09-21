@@ -6,8 +6,8 @@ export const StyledDivOfProduct = styled.div`
 `
 
 export const StyledImgOfProduct = styled.img`
-  border-right: 1px solid ${(props) => props.theme.colors.normal};
-  border-bottom: 1px solid ${(props) => props.theme.colors.normal};
+  border-right: 1px solid ${(props) => props.theme.colors.bordercolor};
+  border-bottom: 1px solid ${(props) => props.theme.colors.bordercolor};
   padding-right: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 2rem;

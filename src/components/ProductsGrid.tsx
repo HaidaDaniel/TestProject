@@ -3,11 +3,11 @@ import { FC } from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProductsRequest } from '../redux/ducks/products'
+import { RootState } from '../redux/rootReducer'
 
 import { ProductItem } from './index'
 
 import { StyledRow, StyledCol } from '../styled/ProductsGridStyles'
-import { RootState } from '../redux/rootReducer'
 
 const ProductsGrid: FC = () => {
   const dispatch = useDispatch()

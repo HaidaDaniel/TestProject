@@ -2,10 +2,10 @@
 import { FC } from 'react'
 import { Stack } from 'react-bootstrap'
 
-import { Comment } from './index'
+import { Comment } from './'
 
 import { StyledCommentsBlock } from '../styled/CommentsBlockStyles'
-import { IComment } from './interfaces/IProductData'
+import { IComment } from './interfaces/'
 
 interface CommentsBlockProps {
   comments: IComment[]

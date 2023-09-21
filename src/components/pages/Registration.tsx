@@ -1,6 +1,6 @@
 /** @format */
 import { Container, Row, Col } from 'react-bootstrap'
-import { RegistrationBody, Header } from '../index'
+import { RegistrationBody, Header } from '../'
 
 const Registration = () => (
   <Container>

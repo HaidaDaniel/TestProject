@@ -49,8 +49,11 @@ const RatingStars: FC<RatingStarsProps> = ({
           min={0}
           max={5}
           step={0.5}
-          value={ratingInput}
-          onChange={(e) => setRatingInput(e.target.value as any)}
+          value={ratingInput.toString()}
+          onChange={(event) => {
+            const value = parseFloat(event.target.value)
+            setRatingInput(isNaN(value) ? 0 : value)
+          }}
           onBlur={handleInputBlur}
         />
       )}

@@ -1,7 +1,7 @@
 /** @format */
 import { useState, FC } from 'react'
 import { Row, Modal, Button } from 'react-bootstrap'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik'
 import * as Yup from 'yup'
 import { useNavigate } from 'react-router-dom'
 
@@ -13,6 +13,7 @@ import {
   StyledFormLabel,
   StyledFormControl,
 } from '../styled/RegistrationBodyStyles'
+import { IFormValues } from './interfaces'
 
 const RegistrationBody: FC = () => {
   const [isSuccess, setIsSuccess] = useState(false)
@@ -32,7 +33,10 @@ const RegistrationBody: FC = () => {
       .required('This field is required'),
   })
 
-  const handleSubmit = async (values: any, { resetForm }: any) => {
+  const handleSubmit = async (
+    values: IFormValues,
+    { resetForm }: FormikHelpers<IFormValues>
+  ) => {
     try {
       setTimeout(() => {
         console.log(values)
@@ -66,7 +70,7 @@ const RegistrationBody: FC = () => {
             }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}>
-            {({ isValid }: any) => (
+            {({ isValid }) => (
               <Form>
                 <StyledFormGroup>
                   <StyledFormLabel>Email address</StyledFormLabel>

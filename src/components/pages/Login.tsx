@@ -1,7 +1,7 @@
 /** @format */
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Header, LoginBody } from '../index'
+import { Header, LoginBody } from '../'
 
 const Login = () => (
   <Container>
@@ -19,5 +19,3 @@ const Login = () => (
 )
 
 export default Login
-
-Login.propTypes = {}

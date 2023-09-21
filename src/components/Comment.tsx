@@ -1,7 +1,7 @@
 /** @format */
 import { FC } from 'react'
 
-import { RatingStars } from './index'
+import { RatingStars } from './'
 
 import {
   StyledCard,
@@ -10,7 +10,7 @@ import {
   StyledCardText,
   StyledAuthorText,
 } from '../styled/CommentStyles'
-import { IComment } from './interfaces/IProductData'
+import { IComment } from './interfaces/'
 
 const Comment: FC<IComment> = ({ author, text, rating, commentId }) => (
   <StyledCard>

@@ -1,6 +1,5 @@
 /** @format */
-import { IProduct } from './components/interfaces/IProductData'
-import { IProducts } from './components/interfaces/IProducts'
+import { IProduct, IProducts } from './components/interfaces/'
 
 const PRODUCTS_URL: string | undefined = process.env.REACT_APP_PRODUCTS_URL
 const PRODUCTS_URL_BY_ID: string | undefined =

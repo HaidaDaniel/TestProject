@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
 import { Header, ProductPageBody } from '../index'
+
 import { fetchProductRequest } from '../../redux/ducks/product'
 import { RootState } from '../../redux/rootReducer'
 

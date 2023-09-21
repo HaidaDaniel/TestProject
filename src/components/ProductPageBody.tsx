@@ -7,23 +7,9 @@ import { CommentInput, CommentsBlock, RatingStars } from './index'
 
 import { StyledImgOfProduct } from '../styled/ProductPageBodyStyled'
 import { RootState } from '../redux/rootReducer'
-import { IComment } from './interfaces/IProductData'
+import { IProduct } from './interfaces/'
 
-interface ProductPageBodyProps {
-  id: number
-  image: string
-  title: string
-  rating: {
-    rate: number
-  }
-  price: number
-  description: string
-  comments?: IComment[]
-}
-
-const ProductPageBody: FC<ProductPageBodyProps> = (
-  product: ProductPageBodyProps
-) => {
+const ProductPageBody: FC<IProduct> = (product) => {
   const user = useSelector((state: RootState) => state.auth.user)
   const data = product
 

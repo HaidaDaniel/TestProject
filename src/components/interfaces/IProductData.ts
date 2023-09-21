@@ -10,7 +10,7 @@ export interface IProduct {
     rate: number
     count: number
   }
-  comments: IComment[]
+  comments?: IComment[]
 }
 export interface IComment {
   author: string
@@ -20,5 +20,5 @@ export interface IComment {
 }
 
 export interface IProductData {
-  data: IProduct
+  product: IProduct
 }
