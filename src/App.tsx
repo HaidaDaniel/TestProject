@@ -1,11 +1,11 @@
 /** @format */
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import store from './redux/store'
 import { ThemeProvider } from 'styled-components'
 
 import { Main, Login, Registration, ProductPage } from './components/'
 
+import store from './redux/store'
 import GlobalStyles from './styled/GlobalStyles'
 import theme from './theme'
 import 'bootstrap/dist/css/bootstrap.min.css'
