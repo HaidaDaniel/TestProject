@@ -72,7 +72,10 @@ const LoginBody: FC = () => {
                 />
                 <ErrorMessage name='password' component='div' />
               </StyledFormGroup>
-              <Button className='mb-3' type='submit'>
+              <Button
+                data-testid='submit-button'
+                className='mb-3'
+                type='submit'>
                 Login
               </Button>
             </Form>
