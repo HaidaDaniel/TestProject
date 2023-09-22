@@ -16,7 +16,7 @@ describe('Comment Component', () => {
 
         };
 
-        const { getByText } = render(
+        render(
             <ThemeProvider theme={theme}>
                 <Comment
                     author={comment.author}

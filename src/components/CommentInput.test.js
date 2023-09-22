@@ -15,7 +15,7 @@ describe('CommentInput Component', () => {
     jest.clearAllMocks();
   });
 
-  test('renders CommentInput component', () => {
+  it('renders CommentInput component', () => {
     render(<ThemeProvider theme={theme}><CommentInput productId={1} /></ThemeProvider>);
     const reviewText = screen.getByPlaceholderText('Enter review here ...');
     const sendButton = screen.getByText('Send');
@@ -24,7 +24,7 @@ describe('CommentInput Component', () => {
     expect(sendButton).toBeInTheDocument();
   });
 
-  test('handles form submission', async () => {
+  it('handles form submission', async () => {
     render(<ThemeProvider theme={theme}><CommentInput productId={1} /></ThemeProvider>);
     const reviewText = screen.getByPlaceholderText('Enter review here ...');
     const sendButton = screen.getByText('Send');
