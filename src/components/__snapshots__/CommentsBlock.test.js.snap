@@ -33,6 +33,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -42,6 +43,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -51,6 +53,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -60,6 +63,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -69,6 +73,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -116,6 +121,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -125,6 +131,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -134,6 +141,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -143,6 +151,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
                   >
                     <span
                       class="sc-hhWzdI gPjntB"
+                      data-testid="empty"
                     >
                       ★
                     </span>
@@ -152,6 +161,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
                   >
                     <span
                       class="sc-hhWzdI gPjntB"
+                      data-testid="empty"
                     >
                       ★
                     </span>
@@ -222,6 +232,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -231,6 +242,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -240,6 +252,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -249,6 +262,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -258,6 +272,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -305,6 +320,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -314,6 +330,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -323,6 +340,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
                   >
                     <span
                       class="sc-hhWzdI sc-gXCJSa gPjntB fqfOft"
+                      data-testid="filled"
                     >
                       ★
                     </span>
@@ -332,6 +350,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
                   >
                     <span
                       class="sc-hhWzdI gPjntB"
+                      data-testid="empty"
                     >
                       ★
                     </span>
@@ -341,6 +360,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
                   >
                     <span
                       class="sc-hhWzdI gPjntB"
+                      data-testid="empty"
                     >
                       ★
                     </span>

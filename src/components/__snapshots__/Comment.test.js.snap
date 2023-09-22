@@ -17,6 +17,7 @@ exports[`Comment Component renders comment details correctly 1`] = `
           >
             <span
               class="sc-bYUneI sc-kMbQoj eLouB doquPp"
+              data-testid="filled"
             >
               ★
             </span>
@@ -26,6 +27,7 @@ exports[`Comment Component renders comment details correctly 1`] = `
           >
             <span
               class="sc-bYUneI sc-kMbQoj eLouB doquPp"
+              data-testid="filled"
             >
               ★
             </span>
@@ -35,6 +37,7 @@ exports[`Comment Component renders comment details correctly 1`] = `
           >
             <span
               class="sc-bYUneI sc-kMbQoj eLouB doquPp"
+              data-testid="filled"
             >
               ★
             </span>
@@ -44,6 +47,7 @@ exports[`Comment Component renders comment details correctly 1`] = `
           >
             <span
               class="sc-bYUneI sc-kMbQoj eLouB doquPp"
+              data-testid="filled"
             >
               ★
             </span>
@@ -53,6 +57,7 @@ exports[`Comment Component renders comment details correctly 1`] = `
           >
             <span
               class="sc-bYUneI sc-kMbQoj eLouB doquPp"
+              data-testid="filled"
             >
               ★
             </span>
