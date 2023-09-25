@@ -14,7 +14,12 @@ describe('ProductPageBody Component', () => {
             description: 'Product Description',
             rating: { rate: 4.5 },
             image: 'product-image-url.jpg',
-            comments: [{ id: 1, text: 'Comment 1' }],
+            comments: [{
+                commentId: 1,
+                author: 'John Doe',
+                text: 'Great product!',
+                rating: 5,
+            }],
         };
 
         render(
@@ -25,7 +30,7 @@ describe('ProductPageBody Component', () => {
         expect(screen.getByText(`Price: ${product.price} usd`)).toBeInTheDocument();
         expect(screen.getByText('Description:')).toBeInTheDocument();
         expect(screen.getByText(product.description)).toBeInTheDocument();
-        expect(screen.getByText('Comment 1')).toBeInTheDocument();
+        expect(screen.getByText(product.comments[0].text)).toBeInTheDocument();
         expect(document.body).toMatchSnapshot();
     });
 

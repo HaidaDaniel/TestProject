@@ -533,8 +533,8 @@ exports[`ProductPageBody Component renders product information correctly 1`] = `
                           class="sc-ciJnBw fRpydl"
                         >
                           <span
-                            class="sc-jIJgYh dbcsNS"
-                            data-testid="empty"
+                            class="sc-jIJgYh sc-hhWzdI dbcsNS jcrugB"
+                            data-testid="filled"
                           >
                             ★
                           </span>
@@ -543,8 +543,8 @@ exports[`ProductPageBody Component renders product information correctly 1`] = `
                           class="sc-ciJnBw fRpydl"
                         >
                           <span
-                            class="sc-jIJgYh dbcsNS"
-                            data-testid="empty"
+                            class="sc-jIJgYh sc-hhWzdI dbcsNS jcrugB"
+                            data-testid="filled"
                           >
                             ★
                           </span>
@@ -553,8 +553,8 @@ exports[`ProductPageBody Component renders product information correctly 1`] = `
                           class="sc-ciJnBw fRpydl"
                         >
                           <span
-                            class="sc-jIJgYh dbcsNS"
-                            data-testid="empty"
+                            class="sc-jIJgYh sc-hhWzdI dbcsNS jcrugB"
+                            data-testid="filled"
                           >
                             ★
                           </span>
@@ -563,12 +563,13 @@ exports[`ProductPageBody Component renders product information correctly 1`] = `
                           class="sc-ciJnBw fRpydl"
                         >
                           <span
-                            class="sc-jIJgYh dbcsNS"
-                            data-testid="empty"
+                            class="sc-jIJgYh sc-hhWzdI dbcsNS jcrugB"
+                            data-testid="filled"
                           >
                             ★
                           </span>
                         </div>
+                        5
                          
                         /5
                       </div>
@@ -579,15 +580,17 @@ exports[`ProductPageBody Component renders product information correctly 1`] = `
                       <p
                         class="sc-bjEwCx dsxgdt card-text"
                       >
-                        Comment 1
+                        Great product!
                       </p>
                       <p
                         class="sc-idyqAC kjTTLI card-text"
                       >
                         author:
+                        John Doe
                          
                         <br />
                          review id:
+                        1
                       </p>
                     </div>
                   </div>
