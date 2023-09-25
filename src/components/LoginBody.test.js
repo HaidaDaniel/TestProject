@@ -36,7 +36,8 @@ describe('LoginBody component', () => {
         setTimeout(() => {
             const state = store.getState();
             expect(state.auth.user.email).toBe('demo@demo.com');
-        }, 1000);
+        }, 1000)
+        clearTimeout();
 
     });
 });

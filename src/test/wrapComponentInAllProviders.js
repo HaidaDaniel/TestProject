@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
@@ -10,7 +9,7 @@ import theme from '../theme';
 import GlobalStyles from '../styled/GlobalStyles';
 import rootReducer from '../redux/rootReducer';
 
-function wrapComponentInAllProviders(component, initialState) {
+function wrapComponentInAllProviders(component, initialState,) {
   const useMockStore = !!initialState;
   const setupStore = () => {
     return createStore(

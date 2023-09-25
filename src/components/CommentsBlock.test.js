@@ -5,7 +5,6 @@ import '@testing-library/jest-dom/extend-expect';
 import theme from '../theme';
 import CommentsBlock from './CommentsBlock';
 
-// Mocked comments data for testing
 const mockedComments = [
     {
         commentId: 1,

@@ -15,9 +15,9 @@ const ProductPage = () => {
   useEffect(() => {
     productId && dispatch(fetchProductRequest(productId))
   }, [productId])
-
+  console.log(productId)
   const product = useSelector((state: RootState) => state.product.product)
-
+  console.log(product)
   return (
     <Container>
       <Header />

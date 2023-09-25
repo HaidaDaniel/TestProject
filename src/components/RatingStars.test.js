@@ -1,5 +1,6 @@
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+
 import RatingStars from './RatingStars';
 import wrapComponentInAllProviders from '../test/wrapComponentInAllProviders';
 

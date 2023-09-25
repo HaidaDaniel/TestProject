@@ -11,6 +11,7 @@ exports[`LoginBody component renders login form 1`] = `
       >
         <div
           class="sc-grXZZQ dGlYIN col-md-6 col-12"
+          data-testid="login col"
         >
           <h3
             class="sc-dkjKgF hKyBdL"
