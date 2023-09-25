@@ -11,7 +11,6 @@ describe('Comment Component', () => {
             author: 'John',
             text: 'Test comment',
             rating: 5,
-
         };
 
         render(
@@ -38,4 +37,4 @@ describe('Comment Component', () => {
         expect(document.body).toMatchSnapshot();
 
     });
-});  
+});

@@ -12,7 +12,6 @@ describe('ProductsGrid Component', () => {
             const productItems = screen.getAllByTestId('product-item');
             expect(productItems.length).toBe(20);
 
-
         });
         expect(document.body).toMatchSnapshot();
     });

@@ -33,3 +33,4 @@ it('handles input and rating output change', () => {
 
     expect(currentRating).toBe(4);
 });
+

@@ -52,5 +52,3 @@ describe('initial state of authReducer', () => {
         });
     });
 });
-
-

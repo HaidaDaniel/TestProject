@@ -46,6 +46,5 @@ test('renders CommentsBlock component with no comments', () => {
 
     expect(commentBlockElement).toBeInTheDocument();
     expect(noCommentsMessage).toBeInTheDocument();
-
     expect(document.body).toMatchSnapshot();
 });

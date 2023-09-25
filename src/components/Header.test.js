@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Header from './Header';
 
-
 import wrapComponentInAllProviders from '../test/wrapComponentInAllProviders';
 
 describe('Header component', () => {
@@ -32,4 +31,3 @@ describe('Header component with login', () => {
         expect(document.body).toMatchSnapshot();
     });
 })
-
