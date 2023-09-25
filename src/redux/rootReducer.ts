@@ -1,5 +1,4 @@
 /** @format */
-
 import { combineReducers } from 'redux'
 import productsReducer, { ProductsState } from './ducks/products'
 import productReducer, { ProductState } from './ducks/product'
