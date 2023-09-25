@@ -47,7 +47,7 @@ const ProductPageBody: FC<IProduct> = (product) => {
               {user !== null ? (
                 <CommentInput productId={data.id} />
               ) : (
-                <div>login please to make a review</div>
+                <div>Login please to make a review</div>
               )}
             </Row>
           </Col>
