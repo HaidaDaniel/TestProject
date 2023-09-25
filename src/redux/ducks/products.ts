@@ -90,7 +90,7 @@ export function fetchProductsFailure(
 }
 
 // Saga
-function* fetchProductsSaga() {
+export function* fetchProductsSaga() {
   try {
     const data: IProducts[] = (yield call(fetchProducts)) as IProducts[]
     yield put(fetchProductsSuccess(data))

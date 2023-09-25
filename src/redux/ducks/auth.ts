@@ -107,7 +107,7 @@ export const logout = (): LogoutAction => ({
 })
 
 // Saga
-const fakeLoginAPI = (credentials: LoginPayload) => {
+export const fakeLoginAPI = (credentials: LoginPayload) => {
   return new Promise<string>((resolve, reject) => {
     setTimeout(() => {
       if (
@@ -122,7 +122,7 @@ const fakeLoginAPI = (credentials: LoginPayload) => {
   })
 }
 
-function* loginSaga(action: { type: string; payload: LoginPayload }) {
+export function* loginSaga(action: { type: string; payload: LoginPayload }) {
   try {
     const user: string = yield call(fakeLoginAPI, action.payload)
     yield put(loginSuccess(user))
