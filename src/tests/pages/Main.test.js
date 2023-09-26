@@ -1,6 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/components/pages/Main.test.js
 import Main from '../../../components/pages/Main';
 
@@ -16,6 +17,13 @@ import Main from '../../pages/Main';
 describe('Main Component', () => {
     it('should renders main page', async () => {
 >>>>>>>> origin/newTest:src/tests/pages/Main.test.js
+=======
+import wrapComponentInAllProviders from '../../tests/helpers/wrapComponentInAllProviders';
+import Main from '../../pages/Main';
+
+describe('Main Component', () => {
+    it('should renders main page', async () => {
+>>>>>>> cdcb47e (1st refactor of tests description)
         render(wrapComponentInAllProviders(<Main />));
 
         const headerElement = screen.getByText('Shop');

@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/__snapshots__/components/LoginBody.snap.js
 exports[`LoginBody component should render login form 1`] = `
 ========
 exports[`LoginBody component should renders login form 1`] = `
 >>>>>>>> origin/newTest:src/tests/components/__snapshots__/LoginBody.test.js.snap
+=======
+exports[`LoginBody component should renders login form 1`] = `
+>>>>>>> cdcb47e (1st refactor of tests description)
 <body>
   <div>
     <div

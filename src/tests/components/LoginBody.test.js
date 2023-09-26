@@ -3,18 +3,25 @@ import '@testing-library/jest-dom/extend-expect';
 
 import LoginBody from '../../components/LoginBody';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/newTest
+=======
+>>>>>>> cdcb47e (1st refactor of tests description)
 import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 import store from '../../redux/store';
 
 describe('LoginBody component', () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     it('should render login form', () => {
 =======
     it('should renders login form', () => {
 >>>>>>> origin/newTest
+=======
+    it('should renders login form', () => {
+>>>>>>> cdcb47e (1st refactor of tests description)
         render(
             wrapComponentInAllProviders(<LoginBody />)
         );
@@ -25,10 +32,14 @@ describe('LoginBody component', () => {
     });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     it('should handle form submission', async () => {
 =======
     it('should handles form submission', async () => {
 >>>>>>> origin/newTest
+=======
+    it('should handles form submission', async () => {
+>>>>>>> cdcb47e (1st refactor of tests description)
 
 
         render(

@@ -1,5 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/__snapshots__/components/CommentsBlock.snap.js
 exports[`should render CommentsBlock component with comments 1`] = `
 <body>
@@ -401,6 +402,8 @@ exports[`should render CommentsBlock component with comments 2`] = `
 
 exports[`should render CommentsBlock component with no comments 1`] = `
 ========
+=======
+>>>>>>> cdcb47e (1st refactor of tests description)
 exports[`renders CommentsBlock component with no comments 1`] = `
 >>>>>>>> origin/newTest:src/tests/components/__snapshots__/CommentsBlock.test.js.snap
 <body>

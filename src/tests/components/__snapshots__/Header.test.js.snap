@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/__snapshots__/components/Header.snap.js
 exports[`Header component should render Header component with registration and login links when user is not authenticated 1`] = `
 ========
 exports[`Header component should renders Header component with registration and login links when user is not authenticated 1`] = `
 >>>>>>>> origin/newTest:src/tests/components/__snapshots__/Header.test.js.snap
+=======
+exports[`Header component should renders Header component with registration and login links when user is not authenticated 1`] = `
+>>>>>>> cdcb47e (1st refactor of tests description)
 <body>
   <div>
     <nav
@@ -52,11 +56,15 @@ exports[`Header component should renders Header component with registration and 
 </body>
 `;
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/__snapshots__/components/Header.snap.js
 exports[`Header component with login should render Header component without registration and login links when user is authenticated 1`] = `
 ========
 exports[`Header component with login should renders Header component without registration and login links when user is authenticated 1`] = `
 >>>>>>>> origin/newTest:src/tests/components/__snapshots__/Header.test.js.snap
+=======
+exports[`Header component with login should renders Header component without registration and login links when user is authenticated 1`] = `
+>>>>>>> cdcb47e (1st refactor of tests description)
 <body>
   <div>
     <nav

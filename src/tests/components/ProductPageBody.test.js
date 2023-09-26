@@ -3,18 +3,25 @@ import '@testing-library/jest-dom/extend-expect';
 
 import ProductPageBody from '../../components/ProductPageBody';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/newTest
+=======
+>>>>>>> cdcb47e (1st refactor of tests description)
 import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 describe('ProductPageBody Component', () => {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     it('should render product information correctly', () => {
 =======
     it('should renders product information correctly', () => {
 >>>>>>> origin/newTest
+=======
+    it('should renders product information correctly', () => {
+>>>>>>> cdcb47e (1st refactor of tests description)
         const product = {
             id: 1,
             title: 'Product Title',
@@ -43,10 +50,14 @@ describe('ProductPageBody Component', () => {
     });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     it('should render comment input if user is logged in', () => {
 =======
     it('should renders comment input if user is logged in', () => {
 >>>>>>> origin/newTest
+=======
+    it('should renders comment input if user is logged in', () => {
+>>>>>>> cdcb47e (1st refactor of tests description)
         const product = {
             id: 1,
             title: 'Product Title',
@@ -72,10 +83,14 @@ describe('ProductPageBody Component', () => {
     });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     it('should render login message if user is not logged in', () => {
 =======
     it('should renders login message if user is not logged in', () => {
 >>>>>>> origin/newTest
+=======
+    it('should renders login message if user is not logged in', () => {
+>>>>>>> cdcb47e (1st refactor of tests description)
         const product = {
             id: 1,
             title: 'Product Title',

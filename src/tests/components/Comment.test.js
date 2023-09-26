@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import '@testing-library/jest-dom/extend-expect';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Comment from '../../components/Comment';
 
 import theme from '../../theme';
@@ -11,6 +12,10 @@ import theme from '../../theme';
 import theme from '../../theme';
 import Comment from '../../components/Comment';
 >>>>>>> origin/newTest
+=======
+import theme from '../../theme';
+import Comment from '../../components/Comment';
+>>>>>>> cdcb47e (1st refactor of tests description)
 
 describe('Comment Component', () => {
     it('should renders comment details correctly', () => {

@@ -1,5 +1,6 @@
 module.exports = {
 <<<<<<< HEAD
+<<<<<<< HEAD
     testPathForConsistencyCheck: './src/tests/',
 
     resolveSnapshotPath: (testPath, snapshotExtension) => {
@@ -14,6 +15,8 @@ module.exports = {
     ,
 }
 =======
+=======
+>>>>>>> cdcb47e (1st refactor of tests description)
     // resolves from test to snapshot path
     resolveSnapshotPath: (testPath, snapshotExtension) => {
         if (testPath.includes('/components/')) {
@@ -35,5 +38,9 @@ module.exports = {
     // },
 
     testPathForConsistencyCheck: 'src/tests/components/',
+<<<<<<< HEAD
 };
 >>>>>>> origin/newTest
+=======
+};
+>>>>>>> cdcb47e (1st refactor of tests description)

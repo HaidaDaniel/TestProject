@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/__snapshots__/components/ProductPageBody.snap.js
 exports[`ProductPageBody Component should render comment input if user is logged in 1`] = `
 ========
 exports[`ProductPageBody Component should renders comment input if user is logged in 1`] = `
 >>>>>>>> origin/newTest:src/tests/components/__snapshots__/ProductPageBody.test.js.snap
+=======
+exports[`ProductPageBody Component should renders comment input if user is logged in 1`] = `
+>>>>>>> cdcb47e (1st refactor of tests description)
 <body>
   <div>
     <div
@@ -240,11 +244,15 @@ exports[`ProductPageBody Component should renders comment input if user is logge
 </body>
 `;
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/__snapshots__/components/ProductPageBody.snap.js
 exports[`ProductPageBody Component should render login message if user is not logged in 1`] = `
 ========
 exports[`ProductPageBody Component should renders login message if user is not logged in 1`] = `
 >>>>>>>> origin/newTest:src/tests/components/__snapshots__/ProductPageBody.test.js.snap
+=======
+exports[`ProductPageBody Component should renders login message if user is not logged in 1`] = `
+>>>>>>> cdcb47e (1st refactor of tests description)
 <body>
   <div>
     <div
@@ -391,11 +399,15 @@ exports[`ProductPageBody Component should renders login message if user is not l
 </body>
 `;
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/__snapshots__/components/ProductPageBody.snap.js
 exports[`ProductPageBody Component should render product information correctly 1`] = `
 ========
 exports[`ProductPageBody Component should renders product information correctly 1`] = `
 >>>>>>>> origin/newTest:src/tests/components/__snapshots__/ProductPageBody.test.js.snap
+=======
+exports[`ProductPageBody Component should renders product information correctly 1`] = `
+>>>>>>> cdcb47e (1st refactor of tests description)
 <body>
   <div>
     <div

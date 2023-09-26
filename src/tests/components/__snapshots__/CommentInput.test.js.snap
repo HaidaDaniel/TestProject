@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/__snapshots__/components/CommentInput.snap.js
 exports[`CommentInput Component should handle form submission 1`] = `
 ========
 exports[`CommentInput Component should handles form submission 1`] = `
 >>>>>>>> origin/newTest:src/tests/components/__snapshots__/CommentInput.test.js.snap
+=======
+exports[`CommentInput Component should handles form submission 1`] = `
+>>>>>>> cdcb47e (1st refactor of tests description)
 <body
   class="modal-open"
   data-rr-ui-modal-open=""

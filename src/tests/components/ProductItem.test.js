@@ -3,9 +3,12 @@ import '@testing-library/jest-dom/extend-expect';
 
 import ProductItem from '../../components/ProductItem';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/newTest
+=======
+>>>>>>> cdcb47e (1st refactor of tests description)
 import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 const sampleProduct = {
@@ -23,10 +26,14 @@ const sampleProduct = {
 
 describe('ProductItem Component', () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     it('should render product correctly', () => {
 =======
     it('should renders product correctly', () => {
 >>>>>>> origin/newTest
+=======
+    it('should renders product correctly', () => {
+>>>>>>> cdcb47e (1st refactor of tests description)
         render(wrapComponentInAllProviders(<ProductItem product={sampleProduct} />));
 
         expect(screen.getByTestId('product-item')).toBeInTheDocument();

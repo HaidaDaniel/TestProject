@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import '@testing-library/jest-dom/extend-expect';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import CommentsBlock from '../../components/CommentsBlock';
 
 import theme from '../../theme';
@@ -10,6 +11,10 @@ import theme from '../../theme';
 import theme from '../../theme';
 import CommentsBlock from '../../components/CommentsBlock';
 >>>>>>> origin/newTest
+=======
+import theme from '../../theme';
+import CommentsBlock from '../../components/CommentsBlock';
+>>>>>>> cdcb47e (1st refactor of tests description)
 
 const mockedComments = [
     {
@@ -27,10 +32,14 @@ const mockedComments = [
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 test('should render CommentsBlock component with comments', () => {
 =======
 test('should renders CommentsBlock component with comments', () => {
 >>>>>>> origin/newTest
+=======
+test('should renders CommentsBlock component with comments', () => {
+>>>>>>> cdcb47e (1st refactor of tests description)
     render(<ThemeProvider theme={theme}><CommentsBlock comments={mockedComments} /></ThemeProvider>);
 
     const commentBlockElement = screen.getByTestId('comments-block');

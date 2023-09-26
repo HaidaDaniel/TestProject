@@ -4,6 +4,7 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/components/pages/ProductPage.test.js
 import ProductPage from '../../../components/pages/ProductPage';
 
@@ -21,6 +22,14 @@ import ProductPage from '../../pages/ProductPage';
 describe('ProductPage Component', () => {
     it('should renders ProductPage page', async () => {
 >>>>>>>> origin/newTest:src/tests/pages/ProductPage.test.js
+=======
+import theme from '../../theme';
+import store from '../../redux/store';
+import ProductPage from '../../pages/ProductPage';
+
+describe('ProductPage Component', () => {
+    it('should renders ProductPage page', async () => {
+>>>>>>> cdcb47e (1st refactor of tests description)
         const productId = '1';
 
         render(

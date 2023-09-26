@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/__snapshots__/components/RegistrationBody.snap.js
 exports[`RegistrationBody Component should handle form submission and success modal 1`] = `
 ========
 exports[`RegistrationBody Component should handles form submission and success modal 1`] = `
 >>>>>>>> origin/newTest:src/tests/components/__snapshots__/RegistrationBody.test.js.snap
+=======
+exports[`RegistrationBody Component should handles form submission and success modal 1`] = `
+>>>>>>> cdcb47e (1st refactor of tests description)
 <body
   class=""
   style="padding-right: 1024px;"

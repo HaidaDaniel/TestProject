@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/tests/__snapshots__/components/pages/Main.snap.js
 exports[`Main Component should render main page 1`] = `
 ========
 exports[`Main Component should renders main page 1`] = `
 >>>>>>>> origin/newTest:src/tests/pages/__snapshots__/Main.test.js.snap
+=======
+exports[`Main Component should renders main page 1`] = `
+>>>>>>> cdcb47e (1st refactor of tests description)
 <body>
   <div>
     <div

@@ -17,6 +17,7 @@
     "jsx": "react-jsx"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   "include": [
     "src",
     "src/test/.js",
@@ -38,4 +39,7 @@
 =======
   "include": ["src", "src/tests/helpers/.js"]
 >>>>>>> origin/newTest
+=======
+  "include": ["src", "src/tests/helpers/.js"]
+>>>>>>> cdcb47e (1st refactor of tests description)
 }
