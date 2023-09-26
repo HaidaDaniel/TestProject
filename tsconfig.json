@@ -16,5 +16,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/test/.js"]
+  "include": ["src", "src/tests/helpers/.js"]
 }
