@@ -1,8 +1,8 @@
 import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import RegistrationBody from '../../../components/RegistrationBody';
-import wrapComponentInAllProviders from '../../helpers/wrapComponentInAllProviders';
+import RegistrationBody from '../../components/RegistrationBody';
+import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 describe('RegistrationBody Component', () => {
     it('handles form submission and success modal', async () => {
