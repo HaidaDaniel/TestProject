@@ -1,8 +1,8 @@
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import RatingStars from './RatingStars';
-import wrapComponentInAllProviders from '../test/wrapComponentInAllProviders';
+import RatingStars from '../../components/RatingStars';
+import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 describe('RatingStars Component', () => {
     it('renders stars based on the rating', () => {

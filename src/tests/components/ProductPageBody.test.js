@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import ProductPageBody from './ProductPageBody';
-import wrapComponentInAllProviders from '../test/wrapComponentInAllProviders';
+import ProductPageBody from '../../components/ProductPageBody';
+import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 describe('ProductPageBody Component', () => {
 

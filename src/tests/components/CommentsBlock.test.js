@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import '@testing-library/jest-dom/extend-expect';
 
-import theme from '../theme';
-import CommentsBlock from './CommentsBlock';
+import theme from '../../theme';
+import CommentsBlock from '../../components/CommentsBlock';
 
 const mockedComments = [
     {

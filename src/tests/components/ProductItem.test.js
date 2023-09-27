@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import ProductItem from './ProductItem';
-import wrapComponentInAllProviders from '../test/wrapComponentInAllProviders';
+import ProductItem from '../../components/ProductItem';
+import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 const sampleProduct = {
     "id": 1,

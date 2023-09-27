@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Header from './Header';
 
-import wrapComponentInAllProviders from '../test/wrapComponentInAllProviders';
+import Header from '../../components/Header';
+import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 describe('Header component', () => {
     it('renders Header component with registration and login links when user is not authenticated', () => {

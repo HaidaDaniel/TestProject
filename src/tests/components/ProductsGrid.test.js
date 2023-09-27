@@ -1,7 +1,7 @@
 import { render, waitFor, screen } from '@testing-library/react';
 
-import ProductsGrid from './ProductsGrid';
-import wrapComponentInAllProviders from '../test/wrapComponentInAllProviders';
+import ProductsGrid from '../../components/ProductsGrid';
+import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 describe('ProductsGrid Component', () => {
     it('renders products correctly', async () => {

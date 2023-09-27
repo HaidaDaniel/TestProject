@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import wrapComponentInAllProviders from '../../test/wrapComponentInAllProviders';
-import Login from './Login';
+
+import wrapComponentInAllProviders from '../../helpers/wrapComponentInAllProviders';
+import Login from '../../../components/pages/Login';
 
 describe('Login Component', () => {
     it('renders login page', () => {

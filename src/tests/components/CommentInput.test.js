@@ -2,11 +2,11 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import '@testing-library/jest-dom/extend-expect';
 
-import theme from '../theme';
-import CommentInput from './CommentInput';
-import { postReview } from '../api';
+import theme from '../../theme';
+import CommentInput from '../../components/CommentInput';
+import { postReview } from '../../api';
 
-jest.mock('../api', () => ({
+jest.mock('../../api', () => ({
   postReview: jest.fn(() => Promise.resolve('Review posted successfully')),
 }));
 

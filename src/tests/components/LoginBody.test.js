@@ -1,9 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import LoginBody from './LoginBody';
-import wrapComponentInAllProviders from '../test/wrapComponentInAllProviders';
-import store from '../redux/store';
+import LoginBody from '../../components/LoginBody';
+import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
+import store from '../../redux/store';
 
 describe('LoginBody component', () => {
     it('renders login form', () => {

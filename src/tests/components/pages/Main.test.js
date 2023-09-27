@@ -1,8 +1,8 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import wrapComponentInAllProviders from '../../test/wrapComponentInAllProviders';
-import Main from './Main';
+import wrapComponentInAllProviders from '../../helpers/wrapComponentInAllProviders';
+import Main from '../../../components/pages/Main';
 
 describe('Main Component', () => {
     it('renders main page', async () => {
