@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import ProductItem from '../../components/ProductItem';
+
 import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 const sampleProduct = {
@@ -18,7 +19,7 @@ const sampleProduct = {
 };
 
 describe('ProductItem Component', () => {
-    it('renders product correctly', () => {
+    it('should render product correctly', () => {
         render(wrapComponentInAllProviders(<ProductItem product={sampleProduct} />));
 
         expect(screen.getByTestId('product-item')).toBeInTheDocument();

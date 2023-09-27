@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CommentInput Component handles form submission 1`] = `
+exports[`CommentInput Component should handle form submission 1`] = `
 <body
   class="modal-open"
   data-rr-ui-modal-open=""

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RegistrationBody Component handles form submission and success modal 1`] = `
+exports[`RegistrationBody Component should handle form submission and success modal 1`] = `
 <body
   class=""
   style="padding-right: 1024px;"

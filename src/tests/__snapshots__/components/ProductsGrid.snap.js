@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductsGrid Component renders products correctly 1`] = `
+exports[`ProductsGrid Component should render products correctly 1`] = `
 <body>
   <div>
     <div

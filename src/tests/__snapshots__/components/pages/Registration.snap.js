@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Registration Component renders registration page 1`] = `
+exports[`Registration Component should render registration page 1`] = `
 <body>
   <div>
     <div

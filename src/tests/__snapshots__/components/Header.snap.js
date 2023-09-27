@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header component renders Header component with registration and login links when user is not authenticated 1`] = `
+exports[`Header component should render Header component with registration and login links when user is not authenticated 1`] = `
 <body>
   <div>
     <nav
@@ -48,7 +48,7 @@ exports[`Header component renders Header component with registration and login l
 </body>
 `;
 
-exports[`Header component with login renders Header component without registration and login links when user is authenticated 1`] = `
+exports[`Header component with login should render Header component without registration and login links when user is authenticated 1`] = `
 <body>
   <div>
     <nav

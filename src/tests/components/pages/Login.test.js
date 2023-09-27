@@ -1,11 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import wrapComponentInAllProviders from '../../helpers/wrapComponentInAllProviders';
 import Login from '../../../components/pages/Login';
 
+import wrapComponentInAllProviders from '../../helpers/wrapComponentInAllProviders';
+
+
 describe('Login Component', () => {
-    it('renders login page', () => {
+    it('should render login page', () => {
         render(wrapComponentInAllProviders(<Login />));
         expect(document.body).toMatchSnapshot();
 

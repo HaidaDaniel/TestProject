@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoginBody component renders login form 1`] = `
+exports[`LoginBody component should render login form 1`] = `
 <body>
   <div>
     <div

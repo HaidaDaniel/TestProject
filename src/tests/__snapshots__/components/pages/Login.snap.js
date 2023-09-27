@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login Component renders login page 1`] = `
+exports[`Login Component should render login page 1`] = `
 <body>
   <div>
     <div

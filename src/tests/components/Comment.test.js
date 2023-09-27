@@ -2,11 +2,13 @@ import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import '@testing-library/jest-dom/extend-expect';
 
-import theme from '../../theme';
 import Comment from '../../components/Comment';
 
+import theme from '../../theme';
+
+
 describe('Comment Component', () => {
-    it('renders comment details correctly', () => {
+    it('should renders comment details correctly', () => {
         const comment = {
             author: 'John',
             text: 'Test comment',

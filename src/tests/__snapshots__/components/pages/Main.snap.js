@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Main Component renders main page 1`] = `
+exports[`Main Component should render main page 1`] = `
 <body>
   <div>
     <div

@@ -4,12 +4,14 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 
-import theme from '../../../theme';
-import store from '../../../redux/store';
 import ProductPage from '../../../components/pages/ProductPage';
 
+import theme from '../../../theme';
+import store from '../../../redux/store';
+
+
 describe('ProductPage Component', () => {
-    it('renders ProductPage page', async () => {
+    it('should render ProductPage page', async () => {
         const productId = '1';
 
         render(

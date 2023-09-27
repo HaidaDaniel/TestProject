@@ -2,8 +2,9 @@ import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import '@testing-library/jest-dom/extend-expect';
 
-import theme from '../../theme';
 import CommentsBlock from '../../components/CommentsBlock';
+
+import theme from '../../theme';
 
 const mockedComments = [
     {
@@ -20,7 +21,7 @@ const mockedComments = [
     },
 ];
 
-test('renders CommentsBlock component with comments', () => {
+test('should render CommentsBlock component with comments', () => {
     render(<ThemeProvider theme={theme}><CommentsBlock comments={mockedComments} /></ThemeProvider>);
 
     const commentBlockElement = screen.getByTestId('comments-block');
@@ -38,7 +39,7 @@ test('renders CommentsBlock component with comments', () => {
     });
 });
 
-test('renders CommentsBlock component with no comments', () => {
+test('should render CommentsBlock component with no comments', () => {
     render(<ThemeProvider theme={theme}><CommentsBlock comments={[]} /></ThemeProvider>);
 
     const commentBlockElement = screen.getByTestId('comments-block');

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders CommentsBlock component with comments 1`] = `
+exports[`should render CommentsBlock component with comments 1`] = `
 <body>
   <div>
     <div
@@ -199,7 +199,7 @@ exports[`renders CommentsBlock component with comments 1`] = `
 </body>
 `;
 
-exports[`renders CommentsBlock component with comments 2`] = `
+exports[`should render CommentsBlock component with comments 2`] = `
 <body>
   <div>
     <div
@@ -398,7 +398,7 @@ exports[`renders CommentsBlock component with comments 2`] = `
 </body>
 `;
 
-exports[`renders CommentsBlock component with no comments 1`] = `
+exports[`should render CommentsBlock component with no comments 1`] = `
 <body>
   <div>
     <div

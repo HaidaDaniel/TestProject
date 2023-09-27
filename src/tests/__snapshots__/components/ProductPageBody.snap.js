@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductPageBody Component renders comment input if user is logged in 1`] = `
+exports[`ProductPageBody Component should render comment input if user is logged in 1`] = `
 <body>
   <div>
     <div
@@ -236,7 +236,7 @@ exports[`ProductPageBody Component renders comment input if user is logged in 1`
 </body>
 `;
 
-exports[`ProductPageBody Component renders login message if user is not logged in 1`] = `
+exports[`ProductPageBody Component should render login message if user is not logged in 1`] = `
 <body>
   <div>
     <div
@@ -383,7 +383,7 @@ exports[`ProductPageBody Component renders login message if user is not logged i
 </body>
 `;
 
-exports[`ProductPageBody Component renders product information correctly 1`] = `
+exports[`ProductPageBody Component should render product information correctly 1`] = `
 <body>
   <div>
     <div

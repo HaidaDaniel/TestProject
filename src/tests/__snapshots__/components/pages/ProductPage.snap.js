@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductPage Component renders ProductPage page 1`] = `
+exports[`ProductPage Component should render ProductPage page 1`] = `
 <body>
   <div>
     <div

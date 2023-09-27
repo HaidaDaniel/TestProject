@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comment Component renders comment details correctly 1`] = `
+exports[`Comment Component should renders comment details correctly 1`] = `
 <body>
   <div>
     <div

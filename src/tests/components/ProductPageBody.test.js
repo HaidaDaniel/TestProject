@@ -2,11 +2,12 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import ProductPageBody from '../../components/ProductPageBody';
+
 import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 describe('ProductPageBody Component', () => {
 
-    it('renders product information correctly', () => {
+    it('should render product information correctly', () => {
         const product = {
             id: 1,
             title: 'Product Title',
@@ -34,7 +35,7 @@ describe('ProductPageBody Component', () => {
         expect(document.body).toMatchSnapshot();
     });
 
-    it('renders comment input if user is logged in', () => {
+    it('should render comment input if user is logged in', () => {
         const product = {
             id: 1,
             title: 'Product Title',
@@ -44,7 +45,6 @@ describe('ProductPageBody Component', () => {
             image: 'product-image-url.jpg',
             comments: [],
         };
-
 
         const modifiedInitialState = {
             auth: {
@@ -60,7 +60,7 @@ describe('ProductPageBody Component', () => {
         expect(document.body).toMatchSnapshot();
     });
 
-    it('renders login message if user is not logged in', () => {
+    it('should render login message if user is not logged in', () => {
         const product = {
             id: 1,
             title: 'Product Title',
@@ -74,7 +74,6 @@ describe('ProductPageBody Component', () => {
         render(
             wrapComponentInAllProviders(<ProductPageBody {...product} />)
         );
-
 
         expect(screen.getByText('Login please to make a review')).toBeInTheDocument();
         expect(document.body).toMatchSnapshot();

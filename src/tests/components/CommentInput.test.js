@@ -2,8 +2,9 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import '@testing-library/jest-dom/extend-expect';
 
-import theme from '../../theme';
 import CommentInput from '../../components/CommentInput';
+
+import theme from '../../theme';
 import { postReview } from '../../api';
 
 jest.mock('../../api', () => ({
@@ -15,7 +16,7 @@ describe('CommentInput Component', () => {
     jest.clearAllMocks();
   });
 
-  it('renders CommentInput component', () => {
+  it('should render CommentInput component', () => {
     render(<ThemeProvider theme={theme}><CommentInput productId={1} /></ThemeProvider>);
     const reviewText = screen.getByPlaceholderText('Enter review here ...');
     const sendButton = screen.getByText('Send');
@@ -24,7 +25,7 @@ describe('CommentInput Component', () => {
     expect(sendButton).toBeInTheDocument();
   });
 
-  it('handles form submission', async () => {
+  it('should handle form submission', async () => {
     render(<ThemeProvider theme={theme}><CommentInput productId={1} /></ThemeProvider>);
     const reviewText = screen.getByPlaceholderText('Enter review here ...');
     const sendButton = screen.getByText('Send');

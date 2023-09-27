@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductItem Component renders product correctly 1`] = `
+exports[`ProductItem Component should render product correctly 1`] = `
 <body>
   <div>
     <div

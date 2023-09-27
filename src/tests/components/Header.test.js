@@ -2,10 +2,11 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import Header from '../../components/Header';
+
 import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 describe('Header component', () => {
-    it('renders Header component with registration and login links when user is not authenticated', () => {
+    it('should render Header component with registration and login links when user is not authenticated', () => {
         render(wrapComponentInAllProviders(<Header />));
 
         expect(screen.getByText('Shop')).toBeInTheDocument();
@@ -15,7 +16,7 @@ describe('Header component', () => {
     })
 })
 describe('Header component with login', () => {
-    it('renders Header component without registration and login links when user is authenticated', () => {
+    it('should render Header component without registration and login links when user is authenticated', () => {
         const initialState = {
             auth: {
                 user: 'demo@demo.com',
