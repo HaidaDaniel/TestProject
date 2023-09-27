@@ -42,7 +42,7 @@ const LoginBody: FC = () => {
   return (
     <Row>
       <StyledFormContainer>
-        <StyledCol xs={12} md={6}>
+        <StyledCol data-testid='login col' xs={12} md={6}>
           <StyledHeading>Login</StyledHeading>
           <Formik
             initialValues={{
@@ -72,7 +72,10 @@ const LoginBody: FC = () => {
                 />
                 <ErrorMessage name='password' component='div' />
               </StyledFormGroup>
-              <Button className='mb-3' type='submit'>
+              <Button
+                data-testid='submit-button'
+                className='mb-3'
+                type='submit'>
                 Login
               </Button>
             </Form>

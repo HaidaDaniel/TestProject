@@ -86,7 +86,7 @@ export function fetchProductFailure(error: string): FetchProductFailureAction {
 }
 
 // Saga
-function* fetchProductSaga(action: { type: string; id: number }) {
+export function* fetchProductSaga(action: { type: string; id: number }) {
   try {
     const id: number = action.id
     const data: IProduct = yield call(fetchProductById, id)
