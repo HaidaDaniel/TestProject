@@ -4,10 +4,10 @@ import { Container } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
-import { Header, ProductPageBody } from '../index'
+import { Header, ProductPageBody } from '../components/index'
 
-import { fetchProductRequest } from '../../redux/ducks/product'
-import { RootState } from '../../redux/rootReducer'
+import { fetchProductRequest } from '../redux/ducks/product'
+import { RootState } from '../redux/rootReducer'
 
 const ProductPage = () => {
   const dispatch = useDispatch()

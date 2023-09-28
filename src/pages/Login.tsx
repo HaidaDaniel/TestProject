@@ -1,7 +1,7 @@
 /** @format */
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { Header, LoginBody } from '../'
+import { Header, LoginBody } from '../components'
 
 const Login = () => (
   <Container>

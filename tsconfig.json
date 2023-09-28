@@ -16,6 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+<<<<<<< HEAD
   "include": [
     "src",
     "src/test/.js",
@@ -34,4 +35,7 @@
     "src/tests/components/pages/Main.test.js",
     "src/tests/components/pages/Login.test.js"
   ]
+=======
+  "include": ["src", "src/tests/helpers/.js"]
+>>>>>>> origin/newTest
 }

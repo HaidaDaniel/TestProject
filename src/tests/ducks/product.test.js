@@ -4,12 +4,12 @@ import {
     fetchProductRequest,
     fetchProductSuccess,
     fetchProductSaga,
-} from './product';
-import productReducer from './product';
+} from '../../redux/ducks/product';
+import productReducer from '../../redux/ducks/product';
 import { fetchProductById } from '../../api';
 
 describe('fetchProductRequest action creator', () => {
-    it('creates a FETCH_PRODUCT_REQUEST action with the correct payload', () => {
+    it('should create a FETCH_PRODUCT_REQUEST action with the correct payload', () => {
         const productId = '1';
         const action = fetchProductRequest(productId);
         expect(action).toEqual({
@@ -20,7 +20,7 @@ describe('fetchProductRequest action creator', () => {
 });
 
 describe('productReducer handles FETCH_PRODUCT_REQUEST', () => {
-    it('updates the state correctly when handling FETCH_PRODUCT_REQUEST', () => {
+    it('should update the state correctly when handling FETCH_PRODUCT_REQUEST', () => {
         const initialState = { product: null, loading: false, error: null };
         const action = { type: 'FETCH_PRODUCT_REQUEST' };
         const nextState = productReducer(initialState, action);
@@ -29,7 +29,7 @@ describe('productReducer handles FETCH_PRODUCT_REQUEST', () => {
 });
 
 describe('fetchProductSaga handles successful product fetch', () => {
-    it('correctly handles a successful product fetch', () => {
+    it('should correctly handle a successful product fetch', () => {
         const action = { type: 'FETCH_PRODUCT_REQUEST', id: '1' };
         const generator = fetchProductSaga(action);
 
@@ -43,7 +43,7 @@ describe('fetchProductSaga handles successful product fetch', () => {
 });
 
 describe('initial state of productReducer', () => {
-    it('has the correct initial state', () => {
+    it('should has the correct initial state', () => {
         const initialState = productReducer(undefined, {});
         expect(initialState).toEqual({
             product: null,
