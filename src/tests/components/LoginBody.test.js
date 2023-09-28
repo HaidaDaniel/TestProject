@@ -2,12 +2,19 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import LoginBody from '../../components/LoginBody';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/newTest
 import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 import store from '../../redux/store';
 
 describe('LoginBody component', () => {
+<<<<<<< HEAD
     it('should render login form', () => {
+=======
+    it('should renders login form', () => {
+>>>>>>> origin/newTest
         render(
             wrapComponentInAllProviders(<LoginBody />)
         );
@@ -17,7 +24,11 @@ describe('LoginBody component', () => {
         expect(document.body).toMatchSnapshot();
     });
 
+<<<<<<< HEAD
     it('should handle form submission', async () => {
+=======
+    it('should handles form submission', async () => {
+>>>>>>> origin/newTest
 
 
         render(

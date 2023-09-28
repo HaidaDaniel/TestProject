@@ -4,12 +4,12 @@ import {
     loginSaga,
     fakeLoginAPI,
 
-} from './auth';
-import authReducer from './auth';
+} from '../../redux/ducks/auth';
+import authReducer from '../../redux/ducks/auth';
 
 
 describe('loginRequest action creator', () => {
-    it('creates a LOGIN_REQUEST action', () => {
+    it('should create a LOGIN_REQUEST action', () => {
         const credentials = { email: 'test@test.com', password: 'password' };
         const action = loginRequest(credentials);
         expect(action).toEqual({
@@ -20,7 +20,7 @@ describe('loginRequest action creator', () => {
 });
 
 describe('authReducer handles LOGIN_REQUEST', () => {
-    it('handles LOGIN_REQUEST correctly', () => {
+    it('should handle LOGIN_REQUEST correctly', () => {
         const initialState = { user: null, isLoading: false, error: null };
         const action = { type: 'auth/LOGIN_REQUEST' };
         const nextState = authReducer(initialState, action);
@@ -29,7 +29,7 @@ describe('authReducer handles LOGIN_REQUEST', () => {
 });
 
 describe('loginSaga handles successful login', () => {
-    it('handles successful login', () => {
+    it('should handle successful login', () => {
         const action = { type: 'auth/LOGIN_REQUEST', payload: { email: 'demo@demo.com', password: 'password' } };
         const generator = loginSaga(action);
 
@@ -42,8 +42,8 @@ describe('loginSaga handles successful login', () => {
     });
 });
 
-describe('initial state of authReducer', () => {
-    it('returns the initial state', () => {
+describe('should initial state of authReducer', () => {
+    it('should return the initial state', () => {
         const initialState = authReducer(undefined, {});
         expect(initialState).toEqual({
             user: null,

@@ -2,12 +2,19 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import ProductPageBody from '../../components/ProductPageBody';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/newTest
 import wrapComponentInAllProviders from '../helpers/wrapComponentInAllProviders';
 
 describe('ProductPageBody Component', () => {
 
+<<<<<<< HEAD
     it('should render product information correctly', () => {
+=======
+    it('should renders product information correctly', () => {
+>>>>>>> origin/newTest
         const product = {
             id: 1,
             title: 'Product Title',
@@ -35,7 +42,11 @@ describe('ProductPageBody Component', () => {
         expect(document.body).toMatchSnapshot();
     });
 
+<<<<<<< HEAD
     it('should render comment input if user is logged in', () => {
+=======
+    it('should renders comment input if user is logged in', () => {
+>>>>>>> origin/newTest
         const product = {
             id: 1,
             title: 'Product Title',
@@ -60,7 +71,11 @@ describe('ProductPageBody Component', () => {
         expect(document.body).toMatchSnapshot();
     });
 
+<<<<<<< HEAD
     it('should render login message if user is not logged in', () => {
+=======
+    it('should renders login message if user is not logged in', () => {
+>>>>>>> origin/newTest
         const product = {
             id: 1,
             title: 'Product Title',
