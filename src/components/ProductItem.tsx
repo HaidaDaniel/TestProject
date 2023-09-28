@@ -21,7 +21,7 @@ interface ProductItemProps {
 }
 
 const ProductItem: FC<ProductItemProps> = ({ product }) => (
-  <StyledProductItem>
+  <StyledProductItem data-testid='product-item'>
     <CardStyled>
       <ProductImageBox>
         <Link to={`/products/${product.id}`}>

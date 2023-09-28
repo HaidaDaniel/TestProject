@@ -15,9 +15,7 @@ const ProductPage = () => {
   useEffect(() => {
     productId && dispatch(fetchProductRequest(productId))
   }, [productId])
-
   const product = useSelector((state: RootState) => state.product.product)
-
   return (
     <Container>
       <Header />

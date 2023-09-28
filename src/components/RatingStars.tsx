@@ -35,11 +35,13 @@ const RatingStars: FC<RatingStarsProps> = ({
 
         return (
           <MainSpan key={index}>
-            {starValue >= 0.8 && <FilledStar>&#9733;</FilledStar>}
-            {starValue >= 0.3 && starValue < 0.8 && (
-              <HalfFilled>&#9733;</HalfFilled>
+            {starValue >= 0.8 && (
+              <FilledStar data-testid='filled'>&#9733;</FilledStar>
             )}
-            {starValue < 0.3 && <Star>&#9733;</Star>}
+            {starValue >= 0.3 && starValue < 0.8 && (
+              <HalfFilled data-testid='half-filled'>&#9733;</HalfFilled>
+            )}
+            {starValue < 0.3 && <Star data-testid='empty'>&#9733;</Star>}
           </MainSpan>
         )
       })}

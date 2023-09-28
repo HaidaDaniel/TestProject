@@ -32,7 +32,7 @@ export const InputRating = styled.input`
   max-width: 3rem;
 `
 
-export const MainSpan = styled.span`
+export const MainSpan = styled.div`
   display: inline-block;
   width: 24px;
 `

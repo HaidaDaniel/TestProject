@@ -16,7 +16,7 @@ const ProductPageBody: FC<IProduct> = (product) => {
   return (
     <>
       {data && (
-        <Row className='mt-3'>
+        <Row className='mt-3' data-testid='product-page-body'>
           <Col md='6' xs='12' className=''>
             <StyledImgOfProduct
               src={data.image}
@@ -47,7 +47,7 @@ const ProductPageBody: FC<IProduct> = (product) => {
               {user !== null ? (
                 <CommentInput productId={data.id} />
               ) : (
-                <div>login please to make a review</div>
+                <div>Login please to make a review</div>
               )}
             </Row>
           </Col>

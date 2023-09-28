@@ -39,7 +39,6 @@ const RegistrationBody: FC = () => {
   ) => {
     try {
       setTimeout(() => {
-        console.log(values)
         setIsSuccess(true)
         resetForm()
       }, 500)

@@ -16,5 +16,22 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/test/.js",
+    "src/tests/components/__snapshots__/RegistrationBody.test.js",
+    "src/tests/components/RatingStars.test.js",
+    "src/tests/components/ProductsGrid.test.js",
+    "src/tests/components/ProductPageBody.test.js",
+    "src/tests/components/ProductItem.test.js",
+    "src/tests/components/LoginBody.test.js",
+    "src/tests/components/Header.test.js",
+    "src/tests/components/CommentsBlock.test.js",
+    "src/tests/components/CommentInput.test.js",
+    "src/tests/components/Comment.test.js",
+    "src/tests/components/pages/Registration.test.js",
+    "src/tests/components/pages/ProductPage.test.js",
+    "src/tests/components/pages/Main.test.js",
+    "src/tests/components/pages/Login.test.js"
+  ]
 }

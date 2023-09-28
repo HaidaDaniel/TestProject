@@ -13,19 +13,23 @@ interface CommentsBlockProps {
 
 const CommentsBlock: FC<CommentsBlockProps> = ({ comments }) => (
   <StyledCommentsBlock>
-    <div className='comment-block mt-2'>
+    <div className='comment-block mt-2' data-testid='comments-block'>
       <h5>Customer Reviews :</h5>
       <Stack gap={3}>
-        {comments &&
+        {comments && comments.length > 0 ? (
           comments.map((comment: IComment) => (
-            <Comment
-              key={comment.commentId}
-              author={comment.author}
-              text={comment.text}
-              rating={comment.rating}
-              commentId={comment.commentId}
-            />
-          ))}
+            <div key={comment.commentId} data-testid='comment'>
+              <Comment
+                author={comment.author}
+                text={comment.text}
+                rating={comment.rating}
+                commentId={comment.commentId}
+              />
+            </div>
+          ))
+        ) : (
+          <div>No review available.Be the first reviewer!</div>
+        )}
       </Stack>
     </div>
   </StyledCommentsBlock>
